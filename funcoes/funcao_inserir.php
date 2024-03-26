@@ -24,7 +24,7 @@ function inserir($coluna,$valor,$tabela){
 	if($conexao = connect()){
 
 		// INSERIU ?
-		if(mysql_query($inserir,$conexao)){
+		if(mysqli_query(connect(), $inserir)){
 			// FECHA A CONEXÃO
 			fechaConexao($conexao);
 			return true;

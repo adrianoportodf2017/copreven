@@ -3,14 +3,13 @@
 <?php
 
 
-$convenio           = $_GET["convenio"];
-
-$dia                = date('d');
-$mes                = date('m');
-$ano                = date('Y');
-$empresa            = $_GET["empresa"];
-$tipo               = $_GET["tipo"];
-$nome               = $_GET["nome"];
+$convenio = isset($_GET["convenio"]) ? $_GET["convenio"] : '';
+$dia = isset($_GET["dia"]) ? $_GET["dia"] : '';
+$mes = isset($_GET["mes"]) ? $_GET["mes"] : '';
+$ano = isset($_GET["ano"]) ? $_GET["ano"] : '';
+$empresa = isset($_GET["empresa"]) ? $_GET["empresa"] : '';
+$tipo = isset($_GET["tipo"]) ? $_GET["tipo"] : '';
+$nome = isset($_GET["nome"]) ? $_GET["nome"] : '';
 
 
 

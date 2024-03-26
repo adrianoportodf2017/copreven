@@ -4,12 +4,13 @@
 include("funcao_select.php");
 include("pdo.php");
 
-$convenio           = $_GET["convenio"];
-
-$dia                = $_GET["dia"];
-$mes                = $_GET["mes"];
-$ano                = $_GET["ano"];
-$empresa            = $_GET["empresa"];
+$convenio = isset($_GET["convenio"]) ? $_GET["convenio"] : '';
+$dia = isset($_GET["dia"]) ? $_GET["dia"] : '';
+$mes = isset($_GET["mes"]) ? $_GET["mes"] : '';
+$ano = isset($_GET["ano"]) ? $_GET["ano"] : '';
+$empresa = isset($_GET["empresa"]) ? $_GET["empresa"] : '';
+$tipo = isset($_GET["tipo"]) ? $_GET["tipo"] : '';
+$nome = isset($_GET["nome"]) ? $_GET["nome"] : '';
 
 
 $consulta = select("atendimento","*","WHERE laboratorio NOT LIKE '' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' AND convenio LIKE '%$convenio%' AND empresa LIKE '%$empresa%'","ORDER BY id DESC");

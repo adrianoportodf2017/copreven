@@ -1,7 +1,7 @@
 
 
 <?php
-include("includes/conecta_mysql.inc");
+include("conexao.php");
 
 $variavel 	= date('H:i:s');
 $login      = $_SESSION['login'];
@@ -11,8 +11,8 @@ $sql        = "UPDATE atendimento
 			   SET liberador = '$login', hr_saida = '$variavel'
 			   WHERE id LIKE '$id1'";
 
-$resultado  = mysql_query("$sql");
-mysql_close($conexao);
+$resultado  = mysqli_query(connect(), "$sql");
+mysqli_close(connect());
 
 ?>
 

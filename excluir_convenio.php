@@ -49,7 +49,7 @@ $consulta   = select("convenio","*","WHERE id LIKE '$registro'","ORDER BY id DES
   
 
   <div class="col-md-1">
-  Convenio:<br><?php echo $consulta[$i]['nome'] ?>
+  Convenio:<br><?php echo $consulta['0']['nome'] ?>
   </div>
 
   

@@ -1,7 +1,7 @@
 
 <?php
 
-include("includes/conecta_mysql.inc");
+include("conexao.php");
 
 //DADOS DO PRIMEIRO FORMULARIO
 
@@ -35,9 +35,9 @@ $sql        = "INSERT INTO atendimento VALUES";
 $sql       .= "(NULL,'$dia','$mes','$ano','$convenio','$empresa','$nome','$rg','$cargo','$nascimento','$tipo','$ex_clinico',
 	          '$romberg','$laboratorio','$rx_torax','$rx_torax_oit','$rx_cervical','$rx_lombar','$rx_lombo_sacra','$espirometria',
 	          '$audiometria','$acuidade','$psicossocial','$ecg','$eeg','AGUARDANDO')";
-$resultado  = mysql_query("$sql");
+$resultado  = mysqli_query(connect(), "$sql");
 
-mysql_close($conexao);
+mysqli_close(connect());
 
   if($ex_clinico=='A'){
   $tem_clinico  = "X";

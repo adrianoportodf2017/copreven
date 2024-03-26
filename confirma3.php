@@ -1,53 +1,53 @@
 
 <?php
 
-include("includes/conecta_mysql.inc");
+include("conexao.php");
 
 //DADOS DO PRIMEIRO FORMULARIO
 
-$convenio           = $_GET["convenio"];
-$dia                = $_GET["dia"];
-$mes                = $_GET["mes"];
-$ano                = $_GET["ano"];
-$empresa            = $_GET["empresa"];
-$nome               = $_GET["nome"];
-$rg                 = $_GET["rg"];
-$nascimento         = $_GET["nascimento"];
-$cargo              = $_GET["cargo"];
-$tipo               = $_GET["tipo"];
-$ex_clinico       = @$_GET["ex_clinico"];
-$romberg          = @$_GET["romberg"];
-$laboratorio      = @$_GET["laboratorio"];
-$rx_torax         = @$_GET["rx_torax"];
-$rx_torax_oit     = @$_GET["rx_torax_oit"];
-$rx_cervical      = @$_REQUEST["rx_cervical"];
-$rx_lombar        = @$_GET["rx_lombar"];
-$rx_lombo_sacra   = @$_GET["rx_lombo_sacra"];
-$rx_torax_pa_perfil     = @$_GET["rx_torax_pa_perfil"];
-$rx_coluna_total        = @$_GET["rx_coluna_total"];
-$rx_ombro               = @$_GET["rx_ombro"];
-$rx_joelho              = @$_GET["rx_joelho"];
-$rx_mao                 = @$_GET["rx_mao"];
-$rx_quadril             = @$_GET["rx_quadril"];
-$espirometria     = @$_GET["espirometria"];
-$audiometria      = @$_GET["audiometria"];
-$acuidade         = @$_GET["acuidade"];
-$psicossocial     = @$_GET["psicossocial"];
-$ecg              = @$_GET["ecg"];
-$eeg              = @$_GET["eeg"];
-$obs_raiox        = @$_GET["obs_raiox"];
-$obs_lab          = @$_GET["obs_lab"];
-$hr_chegada       = date('H:i:s');
-$atendente        = $_SESSION['login'];
+$convenio = isset($_GET["convenio"]) ? $_GET["convenio"] : '';
+$dia = isset($_GET["dia"]) ? $_GET["dia"] : '';
+$mes = isset($_GET["mes"]) ? $_GET["mes"] : '';
+$ano = isset($_GET["ano"]) ? $_GET["ano"] : '';
+$empresa = isset($_GET["empresa"]) ? $_GET["empresa"] : '';
+$nome = isset($_GET["nome"]) ? $_GET["nome"] : '';
+$rg = isset($_GET["rg"]) ? $_GET["rg"] : '';
+$nascimento = isset($_GET["nascimento"]) ? $_GET["nascimento"] : '';
+$cargo = isset($_GET["cargo"]) ? $_GET["cargo"] : '';
+$tipo = isset($_GET["tipo"]) ? $_GET["tipo"] : '';
+$ex_clinico = isset($_GET["ex_clinico"]) ? $_GET["ex_clinico"] : '';
+$romberg = isset($_GET["romberg"]) ? $_GET["romberg"] : '';
+$laboratorio = isset($_GET["laboratorio"]) ? $_GET["laboratorio"] : '';
+$rx_torax = isset($_GET["rx_torax"]) ? $_GET["rx_torax"] : '';
+$rx_torax_oit = isset($_GET["rx_torax_oit"]) ? $_GET["rx_torax_oit"] : '';
+$rx_cervical = isset($_REQUEST["rx_cervical"]) ? $_REQUEST["rx_cervical"] : '';
+$rx_lombar = isset($_GET["rx_lombar"]) ? $_GET["rx_lombar"] : '';
+$rx_lombo_sacra = isset($_GET["rx_lombo_sacra"]) ? $_GET["rx_lombo_sacra"] : '';
+$rx_torax_pa_perfil = isset($_GET["rx_torax_pa_perfil"]) ? $_GET["rx_torax_pa_perfil"] : '';
+$rx_coluna_total = isset($_GET["rx_coluna_total"]) ? $_GET["rx_coluna_total"] : '';
+$rx_ombro = isset($_GET["rx_ombro"]) ? $_GET["rx_ombro"] : '';
+$rx_joelho = isset($_GET["rx_joelho"]) ? $_GET["rx_joelho"] : '';
+$rx_mao = isset($_GET["rx_mao"]) ? $_GET["rx_mao"] : '';
+$rx_quadril = isset($_GET["rx_quadril"]) ? $_GET["rx_quadril"] : '';
+$espirometria = isset($_GET["espirometria"]) ? $_GET["espirometria"] : '';
+$audiometria = isset($_GET["audiometria"]) ? $_GET["audiometria"] : '';
+$acuidade = isset($_GET["acuidade"]) ? $_GET["acuidade"] : '';
+$psicossocial = isset($_GET["psicossocial"]) ? $_GET["psicossocial"] : '';
+$ecg = isset($_GET["ecg"]) ? $_GET["ecg"] : '';
+$eeg = isset($_GET["eeg"]) ? $_GET["eeg"] : '';
+$obs_raiox = isset($_GET["obs_raiox"]) ? $_GET["obs_raiox"] : '';
+$obs_lab = isset($_GET["obs_lab"]) ? $_GET["obs_lab"] : '';
+$hr_chegada = date('H:i:s');
+$atendente = isset($_SESSION['login']) ? $_SESSION['login'] : '';
 
-
-$sql        = "INSERT INTO atendimento VALUES";
-$sql       .= "(NULL,'$dia','$mes','$ano','$convenio','$empresa','$nome','$rg','$cargo','$nascimento','$tipo','$ex_clinico',
+$sql = "INSERT INTO atendimento VALUES";
+$sql .= "(NULL,'$dia','$mes','$ano','$convenio','$empresa','$nome','$rg','$cargo','$nascimento','$tipo','$ex_clinico',
 	          '$romberg','$laboratorio','$rx_torax','$rx_torax_oit','$rx_cervical','$rx_lombar','$rx_lombo_sacra','$rx_torax_pa_perfil','$rx_coluna_total','$rx_ombro','$rx_joelho','$rx_mao','$rx_quadril','$espirometria',
-	          '$audiometria','$acuidade','$psicossocial','$ecg','$eeg',NULL,'$obs_raiox','$obs_lab','$hr_chegada','AGUARDANDO','$atendente',NULL)";
-$resultado  = mysql_query("$sql");
+	          '$audiometria','$acuidade','$psicossocial','$ecg','$eeg',NULL,'$obs_raiox','$obs_lab','$hr_chegada','AGUARDANDO','$atendente',NULL, '')";
+$resultado = mysqli_query(connect(), $sql);
 
-mysql_close($conexao);
+
+mysqli_close(connect());
 
   if($ex_clinico=='A'){
   $tem_clinico  = "X";

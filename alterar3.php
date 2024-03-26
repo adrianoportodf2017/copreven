@@ -3,12 +3,10 @@
 <?php
 error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
 $registro = $_GET["registro"];
-
-$con = mysql_connect('www.copreven.com.br', 'clime938_copreve', 'copreven102030') or
-die('Não foi possível conectar');
-mysql_select_db("clime938_copreven", $con);
-mysql_query("DELETE FROM atendimento WHERE id = '$registro'");
-mysql_close($con);
+include('conexao.php');
+$sql = "DELETE FROM atendimento WHERE id = '$registro'";
+mysqli_query(connect(),$sql );
+mysqli_close(connect());
 ?>
 
 <!DOCTYPE html>

@@ -1,7 +1,7 @@
 
 
 <?php
-include("includes/conecta_mysql.inc");
+include("conexao.php");
 
 $nome               = $_GET["nome"];
 $responsavel        = $_GET["responsavel"];
@@ -12,9 +12,9 @@ $obs                = $_GET["obs"];
 
 $sql        = "INSERT INTO convenio VALUES";
 $sql       .= "(NULL,'$nome','$responsavel','$telefone','$email','$obs')";
-$resultado  = mysql_query("$sql");
+$resultado  = mysqli_query(connect(), "$sql");
 
-mysql_close($conexao);
+mysqli_close(connect());
 
 ?>
 
