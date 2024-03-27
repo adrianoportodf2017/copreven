@@ -80,14 +80,14 @@ $consulta2 = select("atendimento", "*", "WHERE ex_clinico LIKE 'O' AND dia LIKE 
                         <span class="text-light">CONFIRMAR ATENDIMENTO</span>
                       </button>
                       <?php if ($consulta[$i]['status'] == '1') { ?>
-                        <button class="btn btn-danger " onclick="status_atendimento('<?php $consulta[$i]['id'] ?>, 1')">
+                        <button class="btn btn-danger" onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1)">
                           <span class="text-light">EM ATENDIMENTO</span>
-                        </button> <br> 
-                        <?php } else { ?>
-                           <button class="btn btn-success" onclick="status_atendimento('<?php $consulta[$i]['id'] ?>, 1')">
-                           <span class="text-light">ATENDER PACIENTE</span>
-                         </button>
-                                    <?php  } ?><br> 
+                        </button> <br>
+                      <?php } else { ?>
+                        <button class="btn btn-success" onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1)">
+                          <span class="text-light">ATENDER PACIENTE</span>
+                        </button>
+                      <?php  } ?><br>
                       <?php echo $consulta[$i]['id'] ?> |
                       <?php echo $consulta[$i]['nome'] ?><br>
                       <?php echo $consulta[$i]['tipo'] ?> |
@@ -107,7 +107,13 @@ $consulta2 = select("atendimento", "*", "WHERE ex_clinico LIKE 'O' AND dia LIKE 
               ?>
 
 
-
+              <script>
+                function status_atendimento(id, status) {
+                  alert('teste');
+                  alert(id);
+                  alert(status);
+                }
+              </script>
             </div>
           </div>
         </div>
