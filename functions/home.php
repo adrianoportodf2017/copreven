@@ -14,4 +14,4 @@ $fila = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$mes%
 
 $t_clinico = count($clinico);
 $t_clinico2 = count($clinico2);
-$t_fila = 1;
+$t_fila = $fila ? count($fila) : '0' ;
