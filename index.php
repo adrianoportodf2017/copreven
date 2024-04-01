@@ -50,7 +50,7 @@ include('functions/home.php');
                 <br>
                 <hr>
                 <center>
-                    <form action="relatorio22a.php" method="GET">
+                    <form action="pages/relatorio22a.php" method="GET">
                         <input type="hidden" name="dia" class="form-control" value="<?php echo date('d'); ?>">
                         <input type="hidden" name="mes" class="form-control" value="<?php echo date('m'); ?>">
                         <input type="hidden" name="ano" class="form-control" value="<?php echo date('Y'); ?>">
@@ -72,7 +72,7 @@ include('functions/home.php');
         <div class="col px-md-5">
             <div class="p-3 border bg-light">
                 <div class="form-group">
-                    <form method="POST" action="confirma.php">
+                    <form method="POST" action="pages/confirma.php">
                         <input type="hidden" name="dia" class="form-control" value="<?php echo date('d'); ?>">
                         <input type="hidden" name="mes" class="form-control" value="<?php echo date('m'); ?>">
                         <input type="hidden" name="ano" class="form-control" value="<?php echo date('Y'); ?>">

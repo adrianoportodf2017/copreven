@@ -12,6 +12,6 @@ $clinico  = select("atendimento", "*", "WHERE ex_clinico NOT LIKE '' AND dia LIK
 $clinico2 = select("atendimento", "*", "WHERE mes LIKE '%$mes%' AND ano LIKE '%$ano%'", "ORDER BY id ASC");
 $fila = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' AND hr_saida LIKE 'AGUARDANDO'", "ORDER BY id ASC");
 
-$t_clinico = count($clinico);
-$t_clinico2 = count($clinico2);
+$t_clinico = $clinico ? count($clinico) : '0';
+$t_clinico2 = $clinico2 ? count($clinico2) : '0';
 $t_fila = $fila ? count($fila) : '0' ;
