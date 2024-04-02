@@ -1,6 +1,6 @@
 <?php
-include("funcao_select.php");
-include("pdo.php");
+include("../includes/autoload.php");
+include("../header.php");
 $dia                = date('d');
 $mes                = date('m');
 $ano                = date('Y');
@@ -31,7 +31,6 @@ $consulta2 = select("atendimento", "*", "WHERE ex_clinico LIKE 'O' AND dia LIKE 
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand">
-          <img class="" src="images/logo1.png" height="35px" width="">
         </a>
       </div>
     </div>
@@ -52,8 +51,8 @@ $consulta2 = select("atendimento", "*", "WHERE ex_clinico LIKE 'O' AND dia LIKE 
           <div class="panel panel-default">
             <div class="panel-body">
               <?php
-              $clinico = $pdo->query("SELECT * FROM atendimento WHERE ex_clinico LIKE 'A'  AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-              $t_clinico = count($clinico);
+           $clinico = select('atendimento', '*', "WHERE ex_clinico = 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+           $t_clinico = ($clinico !== false) ? count($clinico) : 0;
               ?>
               Total de colaboradores - Exame clínico: <strong><?php print $t_clinico; ?></strong>
             </div>
@@ -77,7 +76,7 @@ $consulta2 = select("atendimento", "*", "WHERE ex_clinico LIKE 'O' AND dia LIKE 
                   <ul class="list-group">
                     <li class="list-group-item">
                       <button class="btn btn-outline-primary bg-gray" onclick="window.open('ex_clinico_ok.php?id=<?php echo $consulta[$i]['id'] ?>', 'Pagina', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=50, WIDTH=550, HEIGHT=400');">
-                        <span class="text-light">CONFIRMAR ATENDIMENTO</span>
+                        <span class="text-dark">CONFIRMAR ATENDIMENTO</span>
                       </button>
                       <?php if ($consulta[$i]['status'] == '1') { ?>
                         <button class="btn btn-danger" onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1)">

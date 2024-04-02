@@ -2,8 +2,9 @@
 
 <?php
 
-include("funcao_select.php");
-include("pdo.php");
+include("../includes/autoload.php");
+include("../header.php"); 
+
 
 $msg                = "99";
 $dia                = date('d');
@@ -28,18 +29,7 @@ $consulta2          = select("atendimento","*","WHERE ex_clinico NOT LIKE '' AND
   </head>
   
 
-  <body>
-  <!-- Início do Menu inicial / Barra superior -->
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">
-        <img class="" src="images/logo1.png" height="35px" width="">
-      </a>
-    </div>
-  </div>
-  </nav>
-  <!-- Fim do bloco -->
+
 
   <div class="container">
     <div class="row">
@@ -114,7 +104,6 @@ $consulta2          = select("atendimento","*","WHERE ex_clinico NOT LIKE '' AND
   </div>
 
   </body>
+  <?php include("../footer.php"); ?>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
   </html>

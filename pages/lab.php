@@ -1,7 +1,8 @@
 
 <?php
-include("funcao_select.php");
-include("pdo.php");
+include("../includes/autoload.php");
+include("../header.php");
+
 
 
 $dia                = date('d');
@@ -34,9 +35,7 @@ $consulta2 = select("atendimento","*","WHERE obs_lab LIKE 'O' AND dia LIKE '%$di
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand">
-        <img class="" src="images/logo1.png" height="35px" width="">
-      </a>
+       
     </div>
   </div>
   </nav>
@@ -56,8 +55,9 @@ $consulta2 = select("atendimento","*","WHERE obs_lab LIKE 'O' AND dia LIKE '%$di
   	<div class="panel panel-default">
 	    <div class="panel-body">
         <?php
-        $lab = $pdo->query("SELECT * FROM atendimento WHERE obs_lab LIKE 'A'  AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-        $t_lab = count($lab);
+     $lab = select('atendimento', '*', "WHERE obs_lab = 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+     $t_lab = ($lab !== false) ? count($lab) : 0;
+     
         ?>	             
 	     	Total de colaboradores - Laboratório: <strong><?php print $t_lab; ?></strong>               
 	   	</div>
@@ -142,6 +142,5 @@ $consulta2 = select("atendimento","*","WHERE obs_lab LIKE 'O' AND dia LIKE '%$di
 
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<?php include("../footer.php"); ?>
   </html>

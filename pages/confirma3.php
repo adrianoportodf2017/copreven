@@ -1,7 +1,8 @@
 
 <?php
 
-include("conexao.php");
+include("../includes/autoload.php");
+include("../header.php");
 
 //DADOS DO PRIMEIRO FORMULARIO
 
@@ -165,31 +166,6 @@ mysqli_close(connect());
 
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    
-    <title>Controle de Atendimento | PREVEN</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-  </head>
-
-<body>
-  <!-- Início do Menu inicial / Barra superior -->
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="index.php">
-        <img class="" src="images/logo1.png" height="35px" width="">
-      </a>
-      </div>
-    </div>
-  </nav>
-  <!-- Fim do bloco -->
 
   <div class="container">
      <div class="col-md-12">
@@ -219,7 +195,7 @@ mysqli_close(connect());
             [ <strong><?php echo $tem_clinico ?></strong> ] EXAME CLÍNICO<br>
             [ <strong><?php echo $tem_romberg ?></strong> ] ROMBERG
             <br>
-            <p align="right"><a target="_blank" href="guia_305.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&tem_clinico=<?php echo $tem_clinico ?>&romberg=<?php echo $tem_romberg ?>&nascimento=<?php echo $nascimento ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>
+            <p align="right"><a class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" target="_blank" href="guia_305.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&tem_clinico=<?php echo $tem_clinico ?>&romberg=<?php echo $tem_romberg ?>&nascimento=<?php echo $nascimento ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>
           </div>
       </div>
       <div class="panel panel-default">
@@ -227,7 +203,7 @@ mysqli_close(connect());
             <h4>SGS / <strong>Teste Ergometrico</strong></h4>
             
             <br>
-            <p align="right"><a target="_blank" href="ergometrico.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&nascimento=<?php echo $nascimento ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>            
+            <p align="right"><a class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" target="_blank" href="ergometrico.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&nascimento=<?php echo $nascimento ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>            
           </div>
         </div>
     </div>
@@ -240,7 +216,7 @@ mysqli_close(connect());
             <h6>EXAMES LABORATORIAIS:</h6>
             [ <strong><?php echo $laboratorio ?></strong> ] 
             <br>
-            <p align="right"><a target="_blank" href="guia_406.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&laboratorio=<?php echo $laboratorio ?>&nascimento=<?php echo $nascimento ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>
+            <p align="right"><a class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" target="_blank" href="guia_406.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&laboratorio=<?php echo $laboratorio ?>&nascimento=<?php echo $nascimento ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>
           </div>
         </div>
     </div>
@@ -264,7 +240,7 @@ mysqli_close(connect());
             <hr>
             [ <strong><?php echo $tem_espiro ?></strong> ] ESPIROMETRIA    
             <br>
-            <p align="right"><a target="_blank" href="guia_408.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&nascimento=<?php echo $nascimento ?>&tem_torax=<?php echo $tem_torax ?>&tem_oit=<?php echo $tem_oit ?>&tem_lombar=<?php echo $tem_lombar ?>&tem_cervical=<?php echo $tem_cervical ?>&tem_sacra=<?php echo $tem_sacra ?>&tem_espiro=<?php echo $tem_espiro ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>
+            <p align="right"><a class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" target="_blank" href="guia_408.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&nascimento=<?php echo $nascimento ?>&tem_torax=<?php echo $tem_torax ?>&tem_oit=<?php echo $tem_oit ?>&tem_lombar=<?php echo $tem_lombar ?>&tem_cervical=<?php echo $tem_cervical ?>&tem_sacra=<?php echo $tem_sacra ?>&tem_espiro=<?php echo $tem_espiro ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>
           </div>
         </div>
     </div>
@@ -280,7 +256,7 @@ mysqli_close(connect());
             [ <strong><?php echo $tem_ecg ?></strong> ] ECG<br>
             [ <strong><?php echo $tem_eeg ?></strong> ] EEG<br>
             <br>
-            <p align="right"><a target="_blank" href="guia_1002.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&nascimento=<?php echo $nascimento ?>&tem_audio=<?php echo $tem_audio ?>&tem_acuidade=<?php echo $tem_acuidade ?>&tem_psico=<?php echo $tem_psico ?>&tem_ecg=<?php echo $tem_ecg ?>&tem_eeg=<?php echo $tem_eeg ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>            
+            <p align="right"><a class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" target="_blank" href="guia_1002.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&nascimento=<?php echo $nascimento ?>&tem_audio=<?php echo $tem_audio ?>&tem_acuidade=<?php echo $tem_acuidade ?>&tem_psico=<?php echo $tem_psico ?>&tem_ecg=<?php echo $tem_ecg ?>&tem_eeg=<?php echo $tem_eeg ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>            
           </div></div>
 
         
@@ -290,6 +266,6 @@ mysqli_close(connect());
 
 </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<?php include("../footer.php"); ?>
+
   </html>

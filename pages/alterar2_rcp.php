@@ -1,7 +1,8 @@
 
 
 <?php
-include("funcao_select.php");
+include("../includes/autoload.php");
+include("../header.php");
 
 $registro           = $_GET["registro"];
 
@@ -30,7 +31,7 @@ $consulta   = select("atendimento","*","WHERE id LIKE '$registro'","ORDER BY id 
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="recepcao.php">
-        <img class="" src="images/logo1.png" height="35px" width="">
+        ''
       </a>
     </div>
   </div>
@@ -219,6 +220,5 @@ $consulta   = select("atendimento","*","WHERE id LIKE '$registro'","ORDER BY id 
 
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<?php include("../footer.php"); ?>
   </html>

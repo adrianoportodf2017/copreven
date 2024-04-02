@@ -1,7 +1,8 @@
 
 <?php
-include("funcao_select.php");
-include("pdo.php");
+include("../includes/autoload.php");
+include("../header.php");
+
 
 $dia                = date('d');
 $mes                = date('m');
@@ -34,7 +35,7 @@ $consulta = select("atendimento","*","WHERE dia LIKE '%$dia%' AND mes LIKE '%$me
     <div class="navbar-header">
       <a class="navbar-brand">
 
-        <img class="" src="images/logo1.png" height="35px" width=""><br>
+        ''<br>
         <span style="color: #000080;">&nbsp;&nbsp;&nbsp; <a href="../logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></span></span>
       </a>
     </div>
@@ -52,213 +53,179 @@ $consulta = select("atendimento","*","WHERE dia LIKE '%$dia%' AND mes LIKE '%$me
       </div>
 
       <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            
+    <div class="panel panel-default">
+        <div class="panel-body">
             <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font> <font color="#000000"><strong> &nbsp; Exame Clínico</strong></font> 
             <br>
-                <p align="right">
+            <p align="right">
                 <?php
-                $clinico = $pdo->query("SELECT * FROM atendimento WHERE ex_clinico LIKE 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-                $t_clinico = count($clinico);
+                $clinico = select('atendimento', '*', "WHERE ex_clinico = 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+                $t_clinico = ($clinico !== false) ? count($clinico) : 0;
                 ?>
-
                 <font color="#228B22" size="12"><?php print $t_clinico; ?></font>
-                </p>
-                
-
+            </p>
             <h6><a href="ex_clinico.php" target="_blank"><center><button type="button" class="btn btn-info">Ver sala</button></center></a></h6>
-          </div>
         </div>
-      </div>
+    </div>
+</div>
 
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            
+<div class="col-md-3">
+    <div class="panel panel-default">
+        <div class="panel-body">
             <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font> <font color="#000000"><strong> &nbsp; T. Romberg</strong></font> 
             <br>
-                <p align="right">
+            <p align="right">
                 <?php
-                $romberg = $pdo->query("SELECT * FROM atendimento WHERE romberg LIKE 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-                $t_romberg = count($romberg);
+                $romberg = select('atendimento', '*', "WHERE romberg = 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+                $t_romberg = ($romberg !== false) ? count($romberg) : 0;
                 ?>
-
                 <font color="#228B22" size="12"><?php print $t_romberg; ?></font>
-                </p>
-
-
+            </p>
             <h6><a href="romberg.php" target="_blank"><center><button type="button" class="btn btn-info">Ver sala</button></center></a></h6>                      
-          </div>
         </div>
-      </div>
+    </div>
+</div>
 
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-
+<div class="col-md-3">
+    <div class="panel panel-default">
+        <div class="panel-body">
             <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font> <font color="#000000"><strong> &nbsp; Sala Laboratório</strong></font> 
             <br>
-                <p align="right">
+            <p align="right">
                 <?php
-                $lab = $pdo->query("SELECT * FROM atendimento WHERE obs_lab LIKE 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-                $t_lab = count($lab);
+                $lab = select('atendimento', '*', "WHERE obs_lab = 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+                $t_lab = ($lab !== false) ? count($lab) : 0;
                 ?>
-
                 <font color="#228B22" size="12"><?php print $t_lab; ?></font>
-                </p>
-
+            </p>
             <h6><a href="lab.php" target="_blank"><center><button type="button" class="btn btn-info">Ver sala</button></center></a></h6>                      
-          </div>
         </div>
-      </div>
+    </div>
+</div>
 
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-
+<div class="col-md-3">
+    <div class="panel panel-default">
+        <div class="panel-body">
             <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font> <font color="#000000"><strong> &nbsp; Sala Raio-X</strong></font> 
             <br>
-                <p align="right"><?php
-                $raiox = $pdo->query("SELECT * FROM atendimento WHERE obs_raiox LIKE 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-                $t_raiox = count($raiox);
+            <p align="right">
+                <?php
+                $raiox = select('atendimento', '*', "WHERE obs_raiox = 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+                $t_raiox = ($raiox !== false) ? count($raiox) : 0;
                 ?>
-
                 <font color="#228B22" size="12"><?php print $t_raiox; ?></font>
-                </p>
-
+            </p>
             <h6><a href="raiox.php" target="_blank"><center><button type="button" class="btn btn-info">Ver sala</button></center></a></h6>                      
-          </div>
         </div>
-      </div>
+    </div>
+</div>
 
 
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            
+<div class="col-md-3">
+    <div class="panel panel-default">
+        <div class="panel-body">
             <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font> <font color="#000000"><strong> &nbsp; Espirometria</strong></font> 
             <br>
-                <p align="right">
+            <p align="right">
                 <?php
-                $espiro = $pdo->query("SELECT * FROM atendimento WHERE espirometria LIKE 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-                $t_espiro = count($espiro);
+                $espiro = select('atendimento', '*', "WHERE espirometria = 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+                $t_espiro = ($espiro !== false) ? count($espiro) : 0;
                 ?>
-
                 <font color="#228B22" size="12"><?php print $t_espiro; ?></font>
-                </p>
-            
+            </p>
             <h6><a href="espirometria.php" target="_blank"><center><button type="button" class="btn btn-info">Ver sala</button></center></a></h6>                      
-          </div>
         </div>
-      </div>
+    </div>
+</div>
 
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-
+<div class="col-md-3">
+    <div class="panel panel-default">
+        <div class="panel-body">
             <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font> <font color="#000000"><strong> &nbsp; Audiometria</strong></font> 
             <br>
-                <p align="right">
+            <p align="right">
                 <?php
-                $audio = $pdo->query("SELECT * FROM atendimento WHERE audiometria LIKE 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-                $t_audio = count($audio);
+                $audio = select('atendimento', '*', "WHERE audiometria = 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+                $t_audio = ($audio !== false) ? count($audio) : 0;
                 ?>
-
                 <font color="#228B22" size="12"><?php print $t_audio; ?></font>
-                </p>
-
+            </p>
             <h6><a href="audiometria.php" target="_blank"><center><button type="button" class="btn btn-info">Ver sala</button></center></a></h6>                      
-                      
-          </div>
         </div>
-      </div>
+    </div>
+</div>
 
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-
+<div class="col-md-3">
+    <div class="panel panel-default">
+        <div class="panel-body">
             <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font> <font color="#000000"><strong> &nbsp; Acuidade Visual</strong></font> 
             <br>
-                <p align="right">
+            <p align="right">
                 <?php
-                $acuidade = $pdo->query("SELECT * FROM atendimento WHERE acuidade LIKE 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-                $t_acuidade = count($acuidade);
+                $acuidade = select('atendimento', '*', "WHERE acuidade = 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+                $t_acuidade = ($acuidade !== false) ? count($acuidade) : 0;
                 ?>
-
                 <font color="#228B22" size="12"><?php print $t_acuidade; ?></font>
-                </p>
-
+            </p>
             <h6><a href="acuidade.php" target="_blank"><center><button type="button" class="btn btn-info">Ver sala</button></center></a></h6>                      
-          </div>
         </div>
-      </div>
+    </div>
+</div>
 
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-
+<div class="col-md-3">
+    <div class="panel panel-default">
+        <div class="panel-body">
             <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font> <font color="#000000"><strong> &nbsp; Av. Psicossocial</strong></font> 
             <br>
-                <p align="right">
+            <p align="right">
                 <?php
-                $ap = $pdo->query("SELECT * FROM atendimento WHERE psicossocial LIKE 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-                $t_ap = count($ap);
+                $ap = select('atendimento', '*', "WHERE psicossocial = 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+                $t_ap = ($ap !== false) ? count($ap) : 0;
                 ?>
-
                 <font color="#228B22" size="12"><?php print $t_ap; ?></font>
-                </p>
-            
+            </p>
             <h6><a href="psicossocial.php" target="_blank"><center><button type="button" class="btn btn-info">Ver sala</button></center></a></h6>                      
-          </div>
         </div>
-      </div>
+    </div>
+</div>
 
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-
+<div class="col-md-3">
+    <div class="panel panel-default">
+        <div class="panel-body">
             <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font> <font color="#000000"><strong> &nbsp; ECG</strong></font> 
             <br>
-                <p align="right">
+            <p align="right">
                 <?php
-                $ecg = $pdo->query("SELECT * FROM atendimento WHERE ecg LIKE 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-                $t_ecg = count($ecg);
+                $ecg = select('atendimento', '*', "WHERE ecg = 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+                $t_ecg = ($ecg !== false) ? count($ecg) : 0;
                 ?>
-
                 <font color="#228B22" size="12"><?php print $t_ecg; ?></font>
-                </p>
-
+            </p>
             <h6><a href="ecg.php" target="_blank"><center><button type="button" class="btn btn-info">Ver sala</button></center></a></h6>                      
-          </div>
         </div>
-      </div>
+    </div>
+</div>
 
-      <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-
+<div class="col-md-3">
+    <div class="panel panel-default">
+        <div class="panel-body">
             <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font> <font color="#000000"><strong> &nbsp; EEG</strong></font> 
             <br>
-                <p align="right">
+            <p align="right">
                 <?php
-                $eeg = $pdo->query("SELECT * FROM atendimento WHERE eeg LIKE 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-                $t_eeg = count($eeg);
+                $eeg = select('atendimento', '*', "WHERE eeg = 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+                $t_eeg = ($eeg !== false) ? count($eeg) : 0;
                 ?>
-
                 <font color="#228B22" size="12"><?php print $t_eeg; ?></font>
-                </p>
-
-
+            </p>
             <h6><a href="eeg.php" target="_blank"><center><button type="button" class="btn btn-info">Ver sala</button></center></a></h6>                      
-          </div>
         </div>
-      </div>
-  </div>
+    </div>
+</div>
+
 
   
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<?php include("../footer.php"); ?>
   </html>

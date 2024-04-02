@@ -17,8 +17,9 @@ if ( !isset($_SESSION['login']) and !isset($_SESSION['senha']) ) {
 
 <?php
 
-include("funcao_select.php");
-include("pdo.php");
+include("../includes/autoload.php");
+include("../header.php");
+
 
 $msg                = "99";
 $dia                = date('d');
@@ -54,22 +55,22 @@ $consulta2          = select("atendimento","*","WHERE ex_clinico NOT LIKE '' AND
 
 	
 	<div style="background-image: url('http://www.linuxcmd.org/lcshow/big/109/1098327_dr-who-wallpaper-hd.jpg'); height: 123px;">
-		<div class="container" style="">
-		<br>
-		<span style="color: #B0E0E6; font-family: 'Alegreya Sans', sans-serif; font-size: 30px;"><strong>Painel inicial | Atendimento</strong></span><br>
-		<span style="color: #ffffff; font-family: 'Alegreya Sans', sans-serif; font-size: 15px;"><i class="fas fa-users"></i>&nbsp; Atendimentos de hoje: &nbsp;&nbsp;<?php
-            $clinico = $pdo->query("SELECT * FROM atendimento WHERE dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-            $t_clinico = count($clinico);
-            ?>
-            <?php print $t_clinico; ?> </span><br>
-		<span style="color: #fffff8; font-family: 'Alegreya Sans', sans-serif; font-size: 15px;"><i class="fas fa-users"></i>&nbsp; Atendimentos no mês: &nbsp;&nbsp;<?php
-            $clinico2 = $pdo->query("SELECT * FROM atendimento WHERE mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-            $t_clinico2 = count($clinico2);
-            ?>
-            <?php print $t_clinico2; ?> </span>
+    <div class="container">
+        <br>
+        <span style="color: #B0E0E6; font-family: 'Alegreya Sans', sans-serif; font-size: 30px;"><strong>Painel inicial | Atendimento</strong></span><br>
+        <span style="color: #ffffff; font-family: 'Alegreya Sans', sans-serif; font-size: 15px;"><i class="fas fa-users"></i>&nbsp; Atendimentos de hoje: &nbsp;&nbsp;<?php
+            $clinico = select('atendimento', '*', "WHERE dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+            $t_clinico = ($clinico !== false) ? count($clinico) : 0;
+            echo $t_clinico;
+            ?></span><br>
+        <span style="color: #fffff8; font-family: 'Alegreya Sans', sans-serif; font-size: 15px;"><i class="fas fa-users"></i>&nbsp; Atendimentos no mês: &nbsp;&nbsp;<?php
+            $clinico2 = select('atendimento', '*', "WHERE mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+            $t_clinico2 = ($clinico2 !== false) ? count($clinico2) : 0;
+            echo $t_clinico2;
+            ?></span>
+    </div>
+</div>
 
-		</div>
-	</div>
 
 	<div class="container">
 		<br>

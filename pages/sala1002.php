@@ -1,8 +1,9 @@
 
 
 <?php
-include("funcao_select.php");
-include("pdo.php");
+include("../includes/autoload.php");
+include("../header.php");
+
 
 
 $dia                = date('d');
@@ -29,18 +30,7 @@ $consulta = select("atendimento","*","WHERE (audiometria = '1') OR (acuidade = '
   </head>
   
 
-  <body>
-  <!-- Início do Menu inicial / Barra superior -->
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">
-        <img class="" src="images/logo1.png" height="35px" width="">
-      </a>
-    </div>
-  </div>
-  </nav>
-  <!-- Fim do bloco -->
+
 
   <div class="container">
   <div class="row">
@@ -56,8 +46,8 @@ $consulta = select("atendimento","*","WHERE (audiometria = '1') OR (acuidade = '
   	<div class="panel panel-default">
 	    <div class="panel-body">
         <?php
-        $clinico = $pdo->query("SELECT * FROM atendimento WHERE (audiometria = '1') OR (acuidade = '1') OR (psicossocial = '1') OR (ecg = '1') OR (eeg = '1') AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-        $t_clinico = count($clinico);
+       $clinico = select('atendimento', '*', "WHERE (audiometria = '1' OR acuidade = '1' OR psicossocial = '1' OR ecg = '1' OR eeg = '1') AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+       $t_clinico = ($clinico !== false) ? count($clinico) : 0;
         ?>	             
 	     	Total de colaboradores Sala 1.002: <strong><?php print $t_clinico; ?></strong>               
 	   	</div>
@@ -112,6 +102,5 @@ $consulta = select("atendimento","*","WHERE (audiometria = '1') OR (acuidade = '
 
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<?php include("../footer.php"); ?>
   </html>

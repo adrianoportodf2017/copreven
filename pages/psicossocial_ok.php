@@ -1,5 +1,6 @@
 <?php
-require_once("conexao.php");
+ include("../includes/autoload.php");
+include("../header.php");
 
 $variavel = 'O'; // Supondo que 'O' seja o valor original do status
 $id1 = $_GET["id"];
@@ -46,8 +47,7 @@ mysqli_close(connect());
       <div class="navbar-header">
         <center>
           <a class="navbar-brand" href="index.php">
-            <img class="" src="images/logo1.png" height="35px" width="">
-        </center>
+           </center>
         </a>
       </div>
     </div>

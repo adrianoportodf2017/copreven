@@ -1,8 +1,8 @@
 
 
 <?php
-include("funcao_select.php");
-include("pdo.php");
+include("../includes/autoload.php");
+include("../header.php");
 
 $convenio = isset($_GET["convenio"]) ? $_GET["convenio"] : '';
 $dia = isset($_GET["dia"]) ? $_GET["dia"] : '';
@@ -31,18 +31,7 @@ $consulta = select("atendimento","*","WHERE laboratorio NOT LIKE '' AND dia LIKE
   </head>
   
 
-  <body>
-  <!-- Início do Menu inicial / Barra superior -->
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">
-        <img class="" src="images/logo1.png" height="35px" width="">
-      </a>
-    </div>
-  </div>
-  </nav>
-  <!-- Fim do bloco -->
+
 
   <div class="container">
   <div class="row">
@@ -67,8 +56,9 @@ $consulta = select("atendimento","*","WHERE laboratorio NOT LIKE '' AND dia LIKE
     <div class="panel panel-default">
 	    <div class="panel-body">
         <?php
-        $lab = $pdo->query("SELECT * FROM atendimento WHERE laboratorio NOT LIKE '' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' AND convenio LIKE '%$convenio%' AND empresa LIKE '%$empresa%' ORDER BY id")->fetchAll();
-        $count = count($lab);
+      $lab = select('atendimento', '*', "WHERE laboratorio != '' AND dia LIKE '%{$dia}%' AND mes LIKE '%{$mes}%' AND ano LIKE '%{$ano}%' AND convenio LIKE '%{$convenio}%' AND empresa LIKE '%{$empresa}%'", 'ORDER BY id');
+      $count = ($lab !== false) ? count($lab) : 0;
+      
         ?>	             
 	     	Total de colaboradores encaminhados: <strong><?php print $count; ?></strong>               
 	   	</div>
@@ -125,6 +115,5 @@ $consulta = select("atendimento","*","WHERE laboratorio NOT LIKE '' AND dia LIKE
 
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<?php include("../footer.php"); ?>
   </html>

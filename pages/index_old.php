@@ -17,8 +17,9 @@ if ( !isset($_SESSION['login']) and !isset($_SESSION['senha']) ) {
 
 <?php
 
-include("funcao_select.php");
-include("pdo.php");
+include("../includes/autoload.php");
+include("../header.php");
+
 
 $msg                = "99";
 $dia                = date('d');
@@ -49,7 +50,7 @@ $consulta2          = select("atendimento","*","WHERE ex_clinico NOT LIKE '' AND
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="index.php">
-        <img class="" src="images/logo1.png" height="35px" width="">
+        ''
       </a>
       
     </div>
@@ -159,15 +160,15 @@ $consulta2          = select("atendimento","*","WHERE ex_clinico NOT LIKE '' AND
           
           <font size="1">TOTAL DE ATENDIMENTOS HOJE: <strong><font color="blue">
             <?php
-            $clinico = $pdo->query("SELECT * FROM atendimento WHERE dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-            $t_clinico = count($clinico);
+           $clinico = select('atendimento', '*', "WHERE dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+           $t_clinico = ($clinico !== false) ? count($clinico) : 0;
             ?>
             <?php print $t_clinico; ?>
           </strong></font></font><br>
           <font size="1">TOTAL DE ATENDIMENTOS / MÊS: <strong><font color="blue">
             <?php
-            $clinico2 = $pdo->query("SELECT * FROM atendimento WHERE mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-            $t_clinico2 = count($clinico2);
+         $clinico2 = select('atendimento', '*', "WHERE mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+         $t_clinico2 = ($clinico2 !== false) ? count($clinico2) : 0;
             ?>
             <?php print $t_clinico2; ?>
           </strong></font></font>
@@ -202,8 +203,7 @@ $consulta2          = select("atendimento","*","WHERE ex_clinico NOT LIKE '' AND
 
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<?php include("../footer.php"); ?>
   <script> 
 function formatar(src, mask) 
 { 

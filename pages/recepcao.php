@@ -2,8 +2,9 @@
 
 <?php
 
-include("funcao_select.php");
-include("pdo.php");
+include("../includes/autoload.php");
+include("../header.php");
+
 
 $msg                = "99";
 $dia                = date('d');
@@ -47,8 +48,8 @@ $consulta2          = select("atendimento","*","WHERE ex_clinico NOT LIKE '' AND
 				<span style="color: #B0E0E6; font-family: 'Alegreya Sans', sans-serif; font-size: 20px;">Em espera: <span class="badge badge-warning">
 
 					<?php
-		            $fila = $pdo->query("SELECT * FROM atendimento WHERE dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' AND hr_saida LIKE 'AGUARDANDO'")->fetchAll();
-		            $t_fila = count($fila);
+		           $fila = select('atendimento', '*', "WHERE dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' AND hr_saida = 'AGUARDANDO'");
+				   $t_fila = ($fila !== false) ? count($fila) : 0;
 		            ?>
             		<?php print $t_fila; ?>
 

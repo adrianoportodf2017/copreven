@@ -35,8 +35,9 @@ $tipo               = $_POST["tipo"];
   <div class="col-md-12">
   <hr>
   </div>
-  <div class="row"> 
   <form action="confirma2.php" method="get">
+
+  <div class="row"> 
   <div class="col-md-2">
     <div class="panel panel-default">
     <div class="panel-body">
@@ -212,6 +213,5 @@ $tipo               = $_POST["tipo"];
   </div>
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <?php include("../footer.php"); ?>
   </html>

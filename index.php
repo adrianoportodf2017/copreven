@@ -18,13 +18,13 @@ include('functions/home.php');
         <div class="card-body">
             <center>
                 <span class="menu-options">
-                    <i class="fas fa-plus-square"></i>&nbsp;<a href="cadastro_convenio.php"> Cadastrar convênio</a>&nbsp; &nbsp; &nbsp;
-                    <i class="fas fa-minus-square"></i>&nbsp;<a href="configuracoes.php"> Excluir convênio</a>&nbsp; &nbsp; &nbsp;
-                    <i class="fas fa-user-times"></i>&nbsp;<a href="alterar.php"> Excluir Atendimento</a>&nbsp; &nbsp; &nbsp;
-                    <i class="fas fa-file-pdf"></i>&nbsp;<a href="relatorio.php"> Relatório de Atendimento</a>&nbsp; &nbsp; &nbsp;
-                    <i class="fas fa-search-dollar"></i>&nbsp;<a href="faturamento.php"> Faturamento</a>&nbsp; &nbsp; &nbsp;
-                    <i class="fas fa-vial">&nbsp;</i><a href="faturamentolab.php"> Faturamento Lab</a>&nbsp; &nbsp; &nbsp;
-                    <i class="fas fa-person-booth">&nbsp;</i><a href="salas.php"> Salas de Atendimento</a>
+                    <i class="fas fa-plus-square"></i>&nbsp;<a href="pages/cadastro_convenio.php"> Cadastrar convênio</a>&nbsp; &nbsp; &nbsp;
+                    <i class="fas fa-minus-square"></i>&nbsp;<a href="pages/configuracoes.php"> Excluir convênio</a>&nbsp; &nbsp; &nbsp;
+                    <i class="fas fa-user-times"></i>&nbsp;<a href="pages/alterar.php"> Excluir Atendimento</a>&nbsp; &nbsp; &nbsp;
+                    <i class="fas fa-file-pdf"></i>&nbsp;<a href="pages/relatorio.php"> Relatório de Atendimento</a>&nbsp; &nbsp; &nbsp;
+                    <i class="fas fa-search-dollar"></i>&nbsp;<a href="pages/faturamento.php"> Faturamento</a>&nbsp; &nbsp; &nbsp;
+                    <i class="fas fa-vial">&nbsp;</i><a href="pages/faturamentolab.php"> Faturamento Lab</a>&nbsp; &nbsp; &nbsp;
+                    <i class="fas fa-person-booth">&nbsp;</i><a href="pages/salas.php"> Salas de Atendimento</a>
                 </span>
             </center>
         </div>

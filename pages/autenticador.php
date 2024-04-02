@@ -4,8 +4,9 @@
 $email 		= $_REQUEST['login'];
 $pass 		= $_REQUEST['password'];
 
-include("funcao_select.php");
-include("pdo.php");
+include("../includes/autoload.php");
+include("../header.php");
+
 
 $conexao 	= select("acesso","*","WHERE email LIKE '$email' AND senha LIKE '$pass'");
 $contador   = $pdo->query("SELECT * FROM acesso WHERE email LIKE '$email'")->fetchAll();

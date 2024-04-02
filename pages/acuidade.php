@@ -1,7 +1,8 @@
 
 <?php
-include("funcao_select.php");
-include("pdo.php");
+include("../includes/autoload.php");
+include("../header.php");
+
 
 
 $dia                = date('d');
@@ -33,9 +34,7 @@ $consulta2 = select("atendimento","*","WHERE acuidade LIKE 'O' AND dia LIKE '%$d
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand">
-        <img class="" src="images/logo1.png" height="35px" width="">
-      </a>
+       
     </div>
   </div>
   </nav>
@@ -55,8 +54,9 @@ $consulta2 = select("atendimento","*","WHERE acuidade LIKE 'O' AND dia LIKE '%$d
   	<div class="panel panel-default">
 	    <div class="panel-body">
         <?php
-        $clinico = $pdo->query("SELECT * FROM atendimento WHERE acuidade LIKE 'A'  AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-        $t_clinico = count($clinico);
+      $clinico = select('atendimento', '*', "WHERE acuidade = 'A' AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+      $t_clinico = ($clinico !== false) ? count($clinico) : 0;
+      
         ?>	             
 	     	Total de colaboradores - Acuidade: <strong><?php print $t_clinico; ?></strong>               
 	   	</div>
@@ -139,6 +139,5 @@ $consulta2 = select("atendimento","*","WHERE acuidade LIKE 'O' AND dia LIKE '%$d
 
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<?php include("../footer.php"); ?>
   </html>

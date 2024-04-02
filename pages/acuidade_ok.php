@@ -1,7 +1,8 @@
 
 
 <?php
-include("includes/conecta_mysql.inc");
+include("../includes/autoload.php");
+include("../header.php");
 
 $variavel 	= 'O';
 $id1 		= $_GET["id"];
@@ -10,8 +11,8 @@ $sql        = "UPDATE atendimento
 			   SET acuidade = '$variavel'
 			   WHERE id LIKE '$id1'";
 
-$resultado  = mysql_query("$sql");
-mysql_close($conexao);
+$resultado  = mysqli_query(connect(),$sql);
+mysqli_close(connect());
 
 ?>
 
@@ -37,7 +38,7 @@ mysql_close($conexao);
   <div class="container-fluid">
     <div class="navbar-header"><center>
       <a class="navbar-brand" href="index.php">
-        <img class="" src="images/logo1.png" height="35px" width=""></center>
+        ''</center>
       </a>
     </div>
   </div>
@@ -55,6 +56,5 @@ mysql_close($conexao);
 
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<?php include("../footer.php"); ?>
   </html>

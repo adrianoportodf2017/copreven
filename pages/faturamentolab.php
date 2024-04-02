@@ -1,7 +1,8 @@
 
 
 <?php
-include("funcao_select.php");
+include("../includes/autoload.php");
+include("../header.php");
 
 $consulta   = select("convenio","*","WHERE nome LIKE '%'","ORDER BY nome ASC");
 
@@ -19,20 +20,6 @@ $consulta   = select("convenio","*","WHERE nome LIKE '%'","ORDER BY nome ASC");
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
   </head>
-  
-
-  <body>
-  <!-- Início do Menu inicial / Barra superior -->
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">
-        <img class="" src="images/logo1.png" height="35px" width="">
-      </a>
-    </div>
-  </div>
-  </nav>
-  <!-- Fim do bloco -->
   
 
   <div class="container">
@@ -115,6 +102,5 @@ $consulta   = select("convenio","*","WHERE nome LIKE '%'","ORDER BY nome ASC");
 
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<?php include("../footer.php"); ?>
   </html>

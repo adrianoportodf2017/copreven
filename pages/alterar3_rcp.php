@@ -30,7 +30,7 @@ mysqli_close(connect());
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="recepcao.php">
-        <img class="" src="images/logo1.png" height="35px" width="">
+        ''
       </a>
     </div>
   </div>
@@ -59,6 +59,5 @@ mysqli_close(connect());
 
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<?php include("../footer.php"); ?>
   </html>

@@ -1,8 +1,9 @@
 
 
 <?php
-include("funcao_select.php");
-include("pdo.php");
+include("../includes/autoload.php");
+include("../header.php");
+
 
 
 $dia                = date('d');
@@ -34,7 +35,7 @@ $consulta = select("atendimento","*","WHERE (ex_clinico = '1') OR (romberg = '1'
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php">
-        <img class="" src="images/logo1.png" height="35px" width="">
+        ''
       </a>
     </div>
   </div>
@@ -55,8 +56,9 @@ $consulta = select("atendimento","*","WHERE (ex_clinico = '1') OR (romberg = '1'
   	<div class="panel panel-default">
 	    <div class="panel-body">
         <?php
-        $clinico = $pdo->query("SELECT * FROM atendimento WHERE (ex_clinico = '1') OR (romberg = '1') AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id")->fetchAll();
-        $t_clinico = count($clinico);
+   $clinico = select('atendimento', '*', "WHERE (ex_clinico = '1' OR romberg = '1') AND dia LIKE '%$dia%' AND mes LIKE '%$mes%' AND ano LIKE '%$ano%' ORDER BY id");
+   $t_clinico = ($clinico !== false) ? count($clinico) : 0;
+   
         ?>	             
 	     	Total de colaboradores Sala 305: <strong><?php print $t_clinico; ?></strong>               
 	   	</div>
@@ -111,6 +113,5 @@ $consulta = select("atendimento","*","WHERE (ex_clinico = '1') OR (romberg = '1'
 
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<?php include("../footer.php"); ?>
   </html>

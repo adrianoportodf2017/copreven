@@ -1,7 +1,8 @@
 
 
 <?php
-include("funcao_select.php");
+include("../includes/autoload.php");
+include("../header.php");
 
 $consulta   = select("convenio","*","WHERE nome LIKE '%'","ORDER BY nome ASC");
 
@@ -27,7 +28,7 @@ $consulta   = select("convenio","*","WHERE nome LIKE '%'","ORDER BY nome ASC");
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="recepcao.php">
-        <img class="" src="images/logo1.png" height="35px" width="">
+        ''
       </a>
     </div>
   </div>
@@ -75,6 +76,5 @@ $consulta   = select("convenio","*","WHERE nome LIKE '%'","ORDER BY nome ASC");
 
   </body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+<?php include("../footer.php"); ?>
   </html>
