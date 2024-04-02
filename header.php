@@ -14,6 +14,8 @@ include_once("includes/autoload.php");
     <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Monda&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/92f06b8bd3.js"></script>
 </head>

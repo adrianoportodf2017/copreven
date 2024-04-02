@@ -67,36 +67,11 @@ $consulta2 = select("atendimento","*","WHERE acuidade LIKE 'O' AND dia LIKE '%$d
   <br>
 
   <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-body">
-    <h4>Aguardando Atendimento</h4><br>
-  
-  <?php 
+          <div class="panel panel-default">
+            <?php listar_atendimento_salas($consulta, 'acuidade') ?>
+          </div>
+        </div>
 
-  if($consulta == true){
-  for ($i=0;$i<count($consulta);$i++){
-  ?>
-
-  <ul class="list-group">
-    <li class="list-group-item">
-    <a href ="#" onclick="window.open('acuidade_ok.php?id=<?php echo $consulta[$i]['id'] ?>', 'Pagina', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=50, WIDTH=550, HEIGHT=400');">
-      <button type="button" class="btn btn-outline-primary">
-      CONFIRMAR ATENDIMENTO</button></a> <?php echo $consulta[$i]['id'] ?> |  <?php echo $consulta[$i]['nome'] ?><br> <?php echo $consulta[$i]['tipo'] ?> | Convênio: <?php echo $consulta[$i]['convenio'] ?><br>Empresa: <?php echo $consulta[$i]['empresa'] ?> <br> Nasc: <?php echo $consulta[$i]['nascimento'] ?> | Doc: <?php echo $consulta[$i]['rg'] ?> | Função: <?php echo $consulta[$i]['cargo'] ?>
-    </li>
-  </ul>
-
-  <?php
-  } 
-  }else{
-  echo "Nenhum dado encontrado!";
-  }
-  ?>
-
-
-
-      </div>
-    </div>
-  </div>
 
 
   <div class="col-md-6">

@@ -9,8 +9,9 @@ include("../header.php");
 
 
 $conexao 	= select("acesso","*","WHERE email LIKE '$email' AND senha LIKE '$pass'");
-$contador   = $pdo->query("SELECT * FROM acesso WHERE email LIKE '$email'")->fetchAll();
-$t_cont     = count($contador);
+$contador = select('acesso', '*', "WHERE email = '$email'");
+$t_cont = ($contador !== false) ? count($contador) : 0;
+
 
 //Caso consiga logar cria a sessão
 if ($t_cont > 0) {
