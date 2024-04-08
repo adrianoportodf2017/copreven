@@ -1,7 +1,9 @@
 <?php
 
-
-require (dirname(__DIR__). '/config/config.php');
+// Define a codificação de caracteres como UTF-8
+header('Content-Type: text/html; charset=UTF-8');
+// Inclua outros códigos PHP abaixo desta linha
+include_once (dirname(__DIR__). '/config/config.php');
 // Arquivo: autoload.php
 
 // Função para carregar arquivos de funções padrões e repetitivas

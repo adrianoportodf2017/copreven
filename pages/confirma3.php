@@ -44,7 +44,7 @@ $atendente = isset($_SESSION['login']) ? $_SESSION['login'] : '';
 $sql = "INSERT INTO atendimento VALUES";
 $sql .= "(NULL,'$dia','$mes','$ano','$convenio','$empresa','$nome','$rg','$cargo','$nascimento','$tipo','$ex_clinico',
 	          '$romberg','$laboratorio','$rx_torax','$rx_torax_oit','$rx_cervical','$rx_lombar','$rx_lombo_sacra','$rx_torax_pa_perfil','$rx_coluna_total','$rx_ombro','$rx_joelho','$rx_mao','$rx_quadril','$espirometria',
-	          '$audiometria','$acuidade','$psicossocial','$ecg','$eeg',NULL,'$obs_raiox','$obs_lab','$hr_chegada','AGUARDANDO','$atendente',NULL, '')";
+	          '$audiometria','$acuidade','$psicossocial','$ecg','$eeg',NULL,'$obs_raiox','$obs_lab','$hr_chegada','AGUARDANDO','$atendente',NULL, '', '')";
 $resultado = mysqli_query(connect(), $sql);
 
 

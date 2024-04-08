@@ -22,7 +22,7 @@ $consulta = select("atendimento","*","WHERE (rx_torax = '1') OR (rx_torax_oit = 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="10;URL=rx_torax.php">
+    <meta http-equiv="refresh" content="10000000000;URL=rx_torax.php">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     
     <title>FATURAMENTO | PREVEN</title>

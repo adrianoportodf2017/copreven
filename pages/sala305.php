@@ -21,7 +21,7 @@ $consulta = select("atendimento","*","WHERE (ex_clinico = '1') OR (romberg = '1'
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="10;URL=sala305.php">
+    <meta http-equiv="refresh" content="100000000000;URL=sala305.php">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     
     <title>FATURAMENTO | PREVEN</title>

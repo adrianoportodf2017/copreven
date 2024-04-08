@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/html; charset=UTF-8');
 include_once("includes/autoload.php");
 ?>
 
@@ -21,7 +22,7 @@ include_once("includes/autoload.php");
 </head>
 <body>
 <nav class="navbar navbar-light bg-light">
-<a href="<?= $base_url ?>"><img src="http://copreven.com.br/sistema/app/images/logo1.png" width="300px"></a>
+<a href="<?= base_url() ?>"><img src="http://copreven.com.br/sistema/app/images/logo1.png" width="300px"></a>
     <span style="color: #000080;">
         <i class="far fa-user" style="color: #000080"></i>
         <span style="color: #000080; font-family: 'Alegreya Sans', sans-serif; font-size: 17px;">

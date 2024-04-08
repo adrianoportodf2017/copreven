@@ -67,10 +67,12 @@ $consulta2 = select("atendimento","*","WHERE obs_raiox LIKE 'O' AND dia LIKE '%$
   <br>
   <br>
 
-  <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-body">
+  <div class="panel-body">
     <h4>Aguardando Atendimento</h4><br>
+    <a href="<?= base_url() ?>/pages/salas.php" class="btn btn-primary" style="text-decoration: none; font-weight: bold;">
+      <i class="bi bi-arrow-left"></i>Voltar para Salas
+    </a>
+    <hr>
   
   <?php 
 
@@ -151,18 +153,22 @@ $consulta2 = select("atendimento","*","WHERE obs_raiox LIKE 'O' AND dia LIKE '%$
 
   <ul class="list-group">
   <li class="list-group-item">
+  <div class="btn-group">
+
                       <button class="btn btn-outline-primary bg-gray" onclick="confirmar_atendimento('<?php echo $consulta[$i]['id'] ?>', 'obs_raiox')">
                         <span class="text-dark">CONFIRMAR ATENDIMENTO</span>
                       </button>
                       <?php if ($consulta[$i]['status'] == '1') { ?>
-                        <button class="btn btn-danger" onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1)">
+                        <button class="btn btn-danger" onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1, 'obs_raiox')">
                           <span class="text-light">EM ATENDIMENTO</span>
                         </button> <br>
                       <?php } else { ?>
-                        <button class="btn btn-success" onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1)">
+                        <button class="btn btn-success" onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1, 'obs_raiox')">
                           <span class="text-light">ATENDER PACIENTE</span>
                         </button>
-                      <?php  } ?><br>
+                      <?php  } ?>
+                      </div>
+                      <br>
                       <?php echo $consulta[$i]['id'] ?> |
                       <?php echo $consulta[$i]['nome'] ?><br>
                       <?php echo $consulta[$i]['tipo'] ?> |
