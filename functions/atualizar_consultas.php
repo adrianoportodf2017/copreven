@@ -27,7 +27,7 @@ if ($consulta == true) {
                         <span class="text-light">ATENDER PACIENTE</span>
                     </button>
                 <?php  } ?>
-                 </div>  
+                </div> 
                 <hr>
                 <?php echo $consulta[$i]['id'] ?> |
                 <?php echo $consulta[$i]['nome'] ?><br>
