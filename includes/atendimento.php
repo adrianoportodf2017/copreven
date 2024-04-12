@@ -22,17 +22,21 @@ function listar_atendimento_salas($consulta, $consultorio)
 
           <ul class="list-group">
             <li class="list-group-item">
-              <button class="btn btn-outline-primary bg-gray" onclick="confirmar_atendimento('<?php echo $consulta[$i]['id'] ?>', '<?php echo $consultorio; ?>')">
-                <span class="text-dark">CONFIRMAR ATENDIMENTO</span>
-              </button>
-              <?php if ($consulta[$i]['status'] == '1') { ?>
-                <div class="alert-danger border border-1 rounded p-1 ">
-               EM ATENDIMENTO
-                </span> <br>
-              <?php } else { ?>
-                <button class="btn btn-success " onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1, '<?php echo $consultorio; ?>')">
-                  <span class="text-light">ATENDER PACIENTE</span>
+            <div class="btn-group">
+                <?php if ($consulta[$i]['status'] == '1' && $consulta[$i]['consultorio_atendimento'] == $consultorio) { ?>
+                <button class="btn btn-outline-primary bg-gray" onclick="confirmar_atendimento('<?php echo $consulta[$i]['id'] ?>', '<?= $consultorio ?>')">
+                    <span class="text-dark">CONFIRMAR ATENDIMENTO</span>
                 </button>
+                <?php } if ($consulta[$i]['status'] == '1') { ?>
+                    <button class="btn btn-danger" disabled>
+                        <span class="text-light">EM ATENDIMENTO SALA: <?= $consulta[$i]['consultorio_atendimento']?></span>
+                    </button> 
+                <?php } else { ?>
+                    <button class="btn btn-success status_atendimento" onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1, '<?= $consultorio ?>')" >
+                        <span class="text-light">ATENDER PACIENTE</span>
+                    </button>
+                <?php  } ?>
+                </div> 
               <?php  } ?><br>
               <?php echo $consulta[$i]['id'] ?> |
               <?php echo $consulta[$i]['nome'] ?><br>
