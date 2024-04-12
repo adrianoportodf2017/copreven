@@ -154,20 +154,20 @@ $consulta2 = select("atendimento","*","WHERE obs_raiox LIKE 'O' AND dia LIKE '%$
   <ul class="list-group">
   <li class="list-group-item">
   <div class="btn-group">
-
-                      <button class="btn btn-outline-primary bg-gray" onclick="confirmar_atendimento('<?php echo $consulta[$i]['id'] ?>', 'obs_raiox')">
-                        <span class="text-dark">CONFIRMAR ATENDIMENTO</span>
-                      </button>
-                      <?php if ($consulta[$i]['status'] == '1') { ?>
-                        <button class="btn btn-danger" onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1, 'obs_raiox')">
-                          <span class="text-light">EM ATENDIMENTO</span>
-                        </button> <br>
-                      <?php } else { ?>
-                        <button class="btn btn-success" onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1, 'obs_raiox')">
-                          <span class="text-light">ATENDER PACIENTE</span>
-                        </button>
-                      <?php  } ?>
-                      </div>
+                <?php if ($consulta[$i]['status'] == '1' && $consulta[$i]['consultorio_atendimento'] == 'obs_raiox') { ?>
+                <button class="btn btn-outline-primary bg-gray" onclick="confirmar_atendimento('<?php echo $consulta[$i]['id'] ?>', 'obs_raiox')">
+                    <span class="text-dark">CONFIRMAR ATENDIMENTO</span>
+                </button>
+                <?php } if ($consulta[$i]['status'] == '1') { ?>
+                    <button class="btn btn-danger" disabled>
+                        <span class="text-light">EM ATENDIMENTO SALA: <?= $consulta[$i]['consultorio_atendimento']?></span>
+                    </button> 
+                <?php } else { ?>
+                    <button class="btn btn-success status_atendimento" onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1, 'obs_raiox')" >
+                        <span class="text-light">ATENDER PACIENTE</span>
+                    </button>
+                <?php  } ?>
+                </div> 
                       <br>
                       <?php echo $consulta[$i]['id'] ?> |
                       <?php echo $consulta[$i]['nome'] ?><br>
