@@ -151,6 +151,8 @@ $consulta2 = select("atendimento","*","WHERE obs_raiox LIKE 'O' AND dia LIKE '%$
 
   
 
+<div class="col-md-6">
+          <div class="panel panel-default">
   <ul class="list-group">
   <li class="list-group-item">
   <div class="btn-group">
