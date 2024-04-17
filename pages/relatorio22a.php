@@ -29,6 +29,7 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
     <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Monda&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta http-equiv="refresh" content="25">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     
@@ -56,7 +57,7 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
        
 
         if($consulta[$i]['ex_clinico']!=''){
-        $tem_clinico  = "<i class='fas fa-check-circle'></i>";
+        $tem_clinico  = "X";
         $status_clinico  = "--";
                 }else{
         $tem_clinico  = "";
@@ -76,7 +77,7 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
 
 
         if($consulta[$i]['romberg']!=''){
-        $tem_romberg  = "<i class='fas fa-check-circle'></i>";
+        $tem_romberg  = "X";
         $status_romberg  = "--";
                 }else{
         $tem_romberg  = "";
@@ -96,7 +97,7 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
 
       
       if($consulta[$i]['rx_torax']!='' OR $consulta[$i]['rx_torax_oit']!='' OR $consulta[$i]['rx_cervical']!='' OR $consulta[$i]['rx_lombar']!='' OR $consulta[$i]['rx_lombo_sacra']!=''){
-        $tem_raiox  = "<i class='fas fa-check-circle'></i>";
+        $tem_raiox  = "X";
         $status_raiox  = "--";
                 }else{
         $tem_raiox  = "";
@@ -118,7 +119,7 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
         
 
         if($consulta[$i]['espirometria']!=''){
-        $tem_espiro  = "<i class='fas fa-check-circle'></i>";
+        $tem_espiro  = "X";
         $status_espiro  = "--";
                 }else{
         $tem_espiro  = "";
@@ -138,7 +139,7 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
 
 
          if($consulta[$i]['audiometria']!=''){
-        $tem_audio  = "<i class='fas fa-check-circle'></i>";
+        $tem_audio  = "X";
         $status_audio  = "--";
                 }else{
         $tem_audio  = "";
@@ -158,7 +159,7 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
 
 
         if($consulta[$i]['acuidade']!=''){
-        $tem_acuidade  = "<i class='fas fa-check-circle'></i>";
+        $tem_acuidade  = "X";
         $status_acuidade  = "--";
                 }else{
         $tem_acuidade  = "";
@@ -178,7 +179,7 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
 
 
         if($consulta[$i]['psicossocial']!=''){
-        $tem_psico  = "<i class='fas fa-check-circle'></i>";
+        $tem_psico  = "X";
         $status_psico  = "--";
                 }else{
         $tem_psico  = "";
@@ -198,7 +199,7 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
 
 
          if($consulta[$i]['ecg']!=''){
-        $tem_ecg  = "<i class='fas fa-check-circle'></i>";
+        $tem_ecg  = "X";
         $status_ecg  = "--";
                 }else{
         $tem_ecg  = "";
@@ -218,7 +219,7 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
 
 
          if($consulta[$i]['eeg']!=''){
-        $tem_eeg  = "<i class='fas fa-check-circle'></i>";
+        $tem_eeg  = "X";
         $status_eeg  = "--";
                 }else{
         $tem_eeg  = "";
@@ -239,7 +240,7 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
 
 
         if($consulta[$i]['laboratorio']!=''){
-        $tem_lab  = "<i class='fas fa-check-circle'></i>";
+        $tem_lab  = "X";
         $status_lab  = "--";
                 }else{
         $tem_lab  = "";
