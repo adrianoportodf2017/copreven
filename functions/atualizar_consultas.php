@@ -14,20 +14,21 @@ if ($consulta == true) {
         <ul class="list-group">
             <li class="list-group-item">
                 <div class="btn-group">
-                <?php if ($consulta[$i]['status'] == '1' && $consulta[$i]['consultorio_atendimento'] == $consultorio) { ?>
-                <button class="btn btn-primary bg-gray" onclick="confirmar_atendimento('<?php echo $consulta[$i]['id'] ?>', '<?= $consultorio ?>')">
-                    <span class="text-white">CONFIRMAR ATENDIMENTO</span>
-                </button>
-                <?php } if ($consulta[$i]['status'] == '1') { ?>
-                    <button class="btn btn-danger" disabled>
-                        <span class="text-light">EM ATENDIMENTO SALA: <?= $consulta[$i]['consultorio_atendimento']?></span>
-                    </button> 
-                <?php } else { ?>
-                    <button class="btn btn-success status_atendimento" onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1, '<?= $consultorio ?>')" >
-                        <span class="text-light">ATENDER PACIENTE</span>
-                    </button>
-                <?php  } ?>
-                </div> 
+                    <?php if ($consulta[$i]['status'] == '1' && $consulta[$i]['consultorio_atendimento'] == $consultorio) { ?>
+                        <button class="btn btn-primary bg-gray" onclick="confirmar_atendimento('<?php echo $consulta[$i]['id'] ?>', '<?= $consultorio ?>')">
+                            <span class="text-white">CONFIRMAR ATENDIMENTO</span>
+                        </button>
+                    <?php }
+                    if ($consulta[$i]['status'] == '1') { ?>
+                        <button class="btn btn-danger" disabled>
+                            <span class="text-light">EM ATENDIMENTO SALA: <?= $consulta[$i]['consultorio_atendimento'] ?></span>
+                        </button>
+                    <?php } else { ?>
+                        <button class="btn btn-success status_atendimento" onclick="status_atendimento('<?php echo $consulta[$i]['id'] ?>', 1, '<?= $consultorio ?>')">
+                            <span class="text-light">ATENDER PACIENTE</span>
+                        </button>
+                    <?php  } ?>
+                </div>
                 <hr>
                 <?php echo $consulta[$i]['id'] ?> |
                 <?php echo $consulta[$i]['nome'] ?><br>
@@ -37,6 +38,9 @@ if ($consulta == true) {
                 Nasc: <?php echo $consulta[$i]['nascimento'] ?> |
                 Doc: <?php echo $consulta[$i]['rg'] ?> |
                 Função: <?php echo $consulta[$i]['cargo'] ?>
+                <?php if ($_GET['consultorio'] == 'obs_lab') { ?>
+                    <br> [EXAMES: <strong><?php echo $consulta[$i]['laboratorio'] ?></strong>]
+                <?php } ?>
             </li>
         </ul>
 
