@@ -47,8 +47,8 @@ $consulta   = select("atendimento","*","WHERE convenio LIKE '%$convenio%' AND di
   <div class="col-md-3">
   Exames:
   </div>	
-  	<br>
-  	<br>
+  	
+  	
 
 
   </div>
@@ -207,33 +207,33 @@ $consulta   = select("atendimento","*","WHERE convenio LIKE '%$convenio%' AND di
 
   	<div class="col-md-3">
   	<font size="3">
-  	 [<strong><?php echo $tem_clinico ?></strong>]-Ex Clinico <br>
-  	 [<strong><?php echo $tem_romberg ?></strong>]-Romberg <br>
-  	 [<strong><?php echo $tem_torax ?></strong>]-Raio-x Torax <br>
-  	 [<strong><?php echo $tem_oit ?></strong>]-Raio-x Torax OIT <br>
-  	 [<strong><?php echo $tem_cervical ?></strong>]-Raio-x Cervical <br>
-  	 [<strong><?php echo $tem_lombar ?></strong>]-Raio-x Lombar <br>
-  	 [<strong><?php echo $tem_sacra ?></strong>]-Raio-x Lombo-Sacra  <br> 	
-     [<strong><?php echo $tem_pa_perfil ?></strong>]-Raio-x Torax PA/Perfil <br>
-     [<strong><?php echo $tem_coluna_total ?></strong>]-Raio-x Coluna Total <br>
-     [<strong><?php echo $tem_ombro ?></strong>]-Raio-x Ombro <br>
-     [<strong><?php echo $tem_joelho ?></strong>]-Raio-x Joelho <br>
-     [<strong><?php echo $tem_mao ?></strong>]-Raio-x Mao <br>
-     [<strong><?php echo $tem_quadril ?></strong>]-Raio-x Qaudril <br>
-     [<strong><?php echo $tem_espiro ?></strong>]-Espirometria <br>
-  	 [<strong><?php echo $tem_audio ?></strong>]-Audiometria <br>
-  	 [<strong><?php echo $tem_acuidade ?></strong>]-Acuidade Visual <br>
-  	 [<strong><?php echo $tem_psico ?></strong>]-Av. Psicossocial <br>
-  	 [<strong><?php echo $tem_ecg ?></strong>]-ECG <br>
-  	 [<strong><?php echo $tem_eeg ?></strong>]-EEG <br>
-  	 <br>
+  	 [<strong><?php echo $tem_clinico ?></strong>]-Ex Clinico 
+  	 [<strong><?php echo $tem_romberg ?></strong>]-Romberg 
+  	 [<strong><?php echo $tem_torax ?></strong>]-Raio-x Torax 
+  	 [<strong><?php echo $tem_oit ?></strong>]-Raio-x Torax OIT 
+  	 [<strong><?php echo $tem_cervical ?></strong>]-Raio-x Cervical 
+  	 [<strong><?php echo $tem_lombar ?></strong>]-Raio-x Lombar 
+  	 [<strong><?php echo $tem_sacra ?></strong>]-Raio-x Lombo-Sacra   	
+     [<strong><?php echo $tem_pa_perfil ?></strong>]-Raio-x Torax PA/Perfil 
+     [<strong><?php echo $tem_coluna_total ?></strong>]-Raio-x Coluna Total 
+     [<strong><?php echo $tem_ombro ?></strong>]-Raio-x Ombro 
+     [<strong><?php echo $tem_joelho ?></strong>]-Raio-x Joelho 
+     [<strong><?php echo $tem_mao ?></strong>]-Raio-x Mao 
+     [<strong><?php echo $tem_quadril ?></strong>]-Raio-x Qaudril 
+     [<strong><?php echo $tem_espiro ?></strong>]-Espirometria 
+  	 [<strong><?php echo $tem_audio ?></strong>]-Audiometria 
+  	 [<strong><?php echo $tem_acuidade ?></strong>]-Acuidade Visual 
+  	 [<strong><?php echo $tem_psico ?></strong>]-Av. Psicossocial 
+  	 [<strong><?php echo $tem_ecg ?></strong>]-ECG 
+  	 [<strong><?php echo $tem_eeg ?></strong>]-EEG 
+  	 
   	 <strong>Laboratoriais:</strong> <strong><?php echo $consulta[$i]['laboratorio']; ?></strong>
   	 </font>
 
   	</div>
   
   </div>
-<br>
+
 
 	<?php
 	} 
