@@ -33,19 +33,19 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
 <div class="container">
   <div class="row">
 
-    <div class="col-md-12">
+    <div class="col-md-12 m-2">
       <h4>
-        <font size="4" color="#00CC00"><span class="glyphicon glyphicon-th" aria-hidden="true"></span></font>
+        <font size="5" color="#00CC00"><i class="bi bi-border-all"></i></font>
         <font color="#FFFFFF">--</font><strong>SALAS DE ATENDIMENTO</strong>
       </h4>
       <hr>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3 border borde-2 p-2">
       <div class="panel panel-default">
         <div class="panel-body">
 
-          <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font>
+        <font size="5" color="#00CC00"><span class="bi bi-box-arrow-right" aria-hidden="true"></span></font>
           <font color="#000000"><strong> &nbsp; Exame Clínico</strong></font>
           <br>
           <p align="right">
@@ -65,10 +65,10 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
       </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3 border borde-2 p-2">
       <div class="panel panel-default">
         <div class="panel-body">
-          <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font>
+        <font size="5" color="#00CC00"><span class="bi bi-box-arrow-right" aria-hidden="true"></span></font>
           <font color="#000000"><strong> &nbsp; T. Romberg</strong></font>
           <br>
           <p align="right">
@@ -85,10 +85,10 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
       </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3 border borde-2 p-2">
       <div class="panel panel-default">
         <div class="panel-body">
-          <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font>
+        <font size="5" color="#00CC00"><span class="bi bi-box-arrow-right" aria-hidden="true"></span></font>
           <font color="#000000"><strong> &nbsp; Sala Laboratório</strong></font>
           <br>
           <p align="right">
@@ -105,10 +105,10 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
       </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3 border borde-2 p-2">
       <div class="panel panel-default">
         <div class="panel-body">
-          <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font>
+        <font size="5" color="#00CC00"><span class="bi bi-box-arrow-right" aria-hidden="true"></span></font>
           <font color="#000000"><strong> &nbsp; Sala Raio-X</strong></font>
           <br>
           <p align="right">
@@ -125,10 +125,10 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
       </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3 border borde-2 p-2">
       <div class="panel panel-default">
         <div class="panel-body">
-          <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font>
+          <font size="5" color="#00CC00"><span class="bi bi-box-arrow-right" aria-hidden="true"></span></font>
           <font color="#000000"><strong> &nbsp; Espirometria</strong></font>
           <br>
           <p align="right">
@@ -146,10 +146,10 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
     </div>
 
 
-    <div class="col-md-3">
+    <div class="col-md-3 border borde-2 p-2">
       <div class="panel panel-default">
         <div class="panel-body">
-          <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font>
+        <font size="5" color="#00CC00"><span class="bi bi-box-arrow-right" aria-hidden="true"></span></font>
           <font color="#000000"><strong> &nbsp; Audiometria</strong></font>
           <br>
           <p align="right">
@@ -166,10 +166,10 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
       </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3 border borde-2 p-2">
       <div class="panel panel-default">
         <div class="panel-body">
-          <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font>
+        <font size="5" color="#00CC00"><span class="bi bi-box-arrow-right" aria-hidden="true"></span></font>
           <font color="#000000"><strong> &nbsp; Acuidade Visual</strong></font>
           <br>
           <p align="right">
@@ -185,10 +185,10 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
         </div>
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 border borde-2 p-2">
       <div class="panel panel-default">
         <div class="panel-body">
-          <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font>
+        <font size="5" color="#00CC00"><span class="bi bi-box-arrow-right" aria-hidden="true"></span></font>
           <font color="#000000"><strong> &nbsp; Av. Psicossocial</strong></font>
           <br>
           <p align="right">
@@ -205,10 +205,10 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
       </div>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-3 border borde-2 p-2">
       <div class="panel panel-default">
         <div class="panel-body">
-          <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font>
+        <font size="5" color="#00CC00"><span class="bi bi-box-arrow-right" aria-hidden="true"></span></font>
           <font color="#000000"><strong> &nbsp; ECG</strong></font>
           <br>
           <p align="right">
@@ -224,10 +224,10 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
         </div>
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 border borde-2 p-2">
       <div class="panel panel-default">
         <div class="panel-body">
-          <font size="2" color="#00CC00"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></font>
+        <font size="5" color="#00CC00"><span class="bi bi-box-arrow-right" aria-hidden="true"></span></font>
           <font color="#000000"><strong> &nbsp; EEG</strong></font>
           <br>
           <p align="right">
