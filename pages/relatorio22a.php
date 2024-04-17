@@ -278,16 +278,16 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
 
 
     <font size="2">
-     Status [ <strong><font color="<?php echo $cor_status_clinico ?>"><?php echo $status_clinico ?></font></strong> ] | [<strong><?php echo $tem_clinico ?></strong>]-Ex Clinico<br>
-     Status [ <strong><font color="<?php echo $cor_status_romberg ?>"><?php echo $status_romberg ?></font></strong> ] | [<strong><?php echo $tem_romberg ?></strong>]-Romberg<br>
-     Status [ <strong><font color="<?php echo $cor_status_raiox ?>"><?php echo $status_raiox ?></font></strong> ] | [<strong><?php echo $tem_raiox ?></strong>]-Raio-x em Geral<br>
-     Status [ <strong><font color="<?php echo $cor_status_espiro ?>"><?php echo $status_espiro ?></font></strong> ] | [<strong><?php echo $tem_espiro ?></strong>]-Espirometria<br>
-     Status [ <strong><font color="<?php echo $cor_status_audio ?>"><?php echo $status_audio ?></font></strong> ] | [<strong><?php echo $tem_audio ?></strong>]-Audiometria<br>
-     Status [ <strong><font color="<?php echo $cor_status_acuidade ?>"><?php echo $status_acuidade ?></font></strong> ] | [<strong><?php echo $tem_acuidade ?></strong>]-Acuidade Visual<br>
-     Status [ <strong><font color="<?php echo $cor_status_psico ?>"><?php echo $status_psico ?></font></strong> ] | [<strong><?php echo $tem_psico ?></strong>]-Av. Psicossocial<br>
-     Status [ <strong><font color="<?php echo $cor_status_ecg ?>"><?php echo $status_ecg ?></font></strong> ] | [<strong><?php echo $tem_ecg ?></strong>]-ECG<br>
-     Status [ <strong><font color="<?php echo $cor_status_eeg ?>"><?php echo $status_eeg ?></font></strong> ] | [<strong><?php echo $tem_eeg ?></strong>]-EEG<br>
-     Status [ <strong><font color="<?php echo $cor_status_lab ?>"><?php echo $status_lab ?></font></strong> ] | [<strong><?php echo $tem_lab ?></strong>]-Ex. Laboratoriais<br>
+     Status [ <strong><font color="<?php echo $cor_status_clinico ?>"><?php echo $status_clinico ?></font></strong> ] | [<strong><?php echo $tem_clinico ?></strong>]-Ex Clinico
+     Status [ <strong><font color="<?php echo $cor_status_romberg ?>"><?php echo $status_romberg ?></font></strong> ] | [<strong><?php echo $tem_romberg ?></strong>]-Romberg
+     Status [ <strong><font color="<?php echo $cor_status_raiox ?>"><?php echo $status_raiox ?></font></strong> ] | [<strong><?php echo $tem_raiox ?></strong>]-Raio-x em Geral
+     Status [ <strong><font color="<?php echo $cor_status_espiro ?>"><?php echo $status_espiro ?></font></strong> ] | [<strong><?php echo $tem_espiro ?></strong>]-Espirometria
+     Status [ <strong><font color="<?php echo $cor_status_audio ?>"><?php echo $status_audio ?></font></strong> ] | [<strong><?php echo $tem_audio ?></strong>]-Audiometria
+     Status [ <strong><font color="<?php echo $cor_status_acuidade ?>"><?php echo $status_acuidade ?></font></strong> ] | [<strong><?php echo $tem_acuidade ?></strong>]-Acuidade Visual
+     Status [ <strong><font color="<?php echo $cor_status_psico ?>"><?php echo $status_psico ?></font></strong> ] | [<strong><?php echo $tem_psico ?></strong>]-Av. Psicossocial
+     Status [ <strong><font color="<?php echo $cor_status_ecg ?>"><?php echo $status_ecg ?></font></strong> ] | [<strong><?php echo $tem_ecg ?></strong>]-ECG
+     Status [ <strong><font color="<?php echo $cor_status_eeg ?>"><?php echo $status_eeg ?></font></strong> ] | [<strong><?php echo $tem_eeg ?></strong>]-EEG
+     Status [ <strong><font color="<?php echo $cor_status_lab ?>"><?php echo $status_lab ?></font></strong> ] | [<strong><?php echo $tem_lab ?></strong>]-Ex. Laboratoriais
      </font>
 
 
