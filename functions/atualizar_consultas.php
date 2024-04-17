@@ -15,8 +15,8 @@ if ($consulta == true) {
             <li class="list-group-item">
                 <div class="btn-group">
                 <?php if ($consulta[$i]['status'] == '1' && $consulta[$i]['consultorio_atendimento'] == $consultorio) { ?>
-                <button class="btn btn-outline-primary bg-gray" onclick="confirmar_atendimento('<?php echo $consulta[$i]['id'] ?>', '<?= $consultorio ?>')">
-                    <span class="text-dark">CONFIRMAR ATENDIMENTO</span>
+                <button class="btn btn-primary bg-gray" onclick="confirmar_atendimento('<?php echo $consulta[$i]['id'] ?>', '<?= $consultorio ?>')">
+                    <span class="text-white">CONFIRMAR ATENDIMENTO</span>
                 </button>
                 <?php } if ($consulta[$i]['status'] == '1') { ?>
                     <button class="btn btn-danger" disabled>
