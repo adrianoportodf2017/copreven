@@ -231,9 +231,9 @@ $consulta   = select("atendimento","*","WHERE convenio LIKE '%$convenio%' AND di
   	 </font>
 
   	</div>
-  
+  <br>
   </div>
-
+  <br> <br>
 
 	<?php
 	} 
