@@ -205,7 +205,7 @@ $consulta   = select("atendimento","*","WHERE convenio LIKE '%$convenio%' AND di
       <?php echo $consulta[$i]['atendente'] ?>
   	</div>
 
-  	<div class="col-md-3">
+  	<div class="col-md-3 p-2 border border-1">
   	<font size="3">
   	 [<strong><?php echo $tem_clinico ?></strong>]-Ex Clinico 
   	 [<strong><?php echo $tem_romberg ?></strong>]-Romberg 
