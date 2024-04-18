@@ -17,12 +17,18 @@ function select($tabela, $coluna = "*", $where = NULL, $ordem = NULL, $limite = 
                 fechaConexao(connect());
                 return $resultados_totais;
             } else {
+                fechaConexao(connect());
+
                 return false;
             }
         } else {
+            fechaConexao(connect());
+
             return false;
         }
     } else {
+        fechaConexao(connect());
+
         return false;
     }
 }
@@ -52,10 +58,14 @@ function update($tabela, $valores, $where) {
             fechaConexao(connect());
             return true;
         } else {
+            fechaConexao(connect());
+
             // Retorna falso se a consulta falhou
             return false;
         }
     } else {
+        fechaConexao(connect());
+
         // Retorna falso se a conexão com o banco de dados falhou
         return false;
     }

@@ -30,7 +30,7 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
     <link href="https://fonts.googleapis.com/css?family=Monda&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta http-equiv="refresh" content="25">
+    <meta http-equiv="refresh" content="250000000">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     
     <script src="https://kit.fontawesome.com/92f06b8bd3.js"></script>

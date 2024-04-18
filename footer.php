@@ -153,6 +153,6 @@
          atualizarDiv();
 
         // Chama a função para atualizar a div a cada 5 segundos
-         setInterval(atualizarDiv, 5000); // 5000 milissegundos = 5 segundos
+         setInterval(atualizarDiv, 10000); // 5000 milissegundos = 5 segundos
     });
 </script>

@@ -17,7 +17,7 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="10;URL=salas.php">
+  <meta http-equiv="refresh" content="25;URL=salas.php">
 
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
@@ -58,7 +58,7 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
           </p>
 
 
-          <h6><a href="ex_clinico.php" target="_blank">
+          <h6><a href="ex_clinico.php" >
               <center><button type="button" class="btn btn-info">Ver sala</button></center>
             </a></h6>
         </div>
@@ -78,7 +78,7 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
             ?>
             <font color="#228B22" size="12"><?php print $t_romberg; ?></font>
           </p>
-          <h6><a href="romberg.php" target="_blank">
+          <h6><a href="romberg.php" >
               <center><button type="button" class="btn btn-info">Ver sala</button></center>
             </a></h6>
         </div>
@@ -98,7 +98,7 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
             ?>
             <font color="#228B22" size="12"><?php print $t_lab; ?></font>
           </p>
-          <h6><a href="lab.php" target="_blank">
+          <h6><a href="lab.php" >
               <center><button type="button" class="btn btn-info">Ver sala</button></center>
             </a></h6>
         </div>
@@ -118,7 +118,7 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
             ?>
             <font color="#228B22" size="12"><?php print $t_raiox; ?></font>
           </p>
-          <h6><a href="raiox.php" target="_blank">
+          <h6><a href="raiox.php" >
               <center><button type="button" class="btn btn-info">Ver sala</button></center>
             </a></h6>
         </div>
@@ -138,7 +138,7 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
             ?>
             <font color="#228B22" size="12"><?php print $t_espiro; ?></font>
           </p>
-          <h6><a href="espirometria.php" target="_blank">
+          <h6><a href="espirometria.php" >
               <center><button type="button" class="btn btn-info">Ver sala</button></center>
             </a></h6>
         </div>
@@ -159,7 +159,7 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
             ?>
             <font color="#228B22" size="12"><?php print $t_audio; ?></font>
           </p>
-          <h6><a href="audiometria.php" target="_blank">
+          <h6><a href="audiometria.php" >
               <center><button type="button" class="btn btn-info">Ver sala</button></center>
             </a></h6>
         </div>
@@ -179,7 +179,7 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
             ?>
             <font color="#228B22" size="12"><?php print $t_acuidade; ?></font>
           </p>
-          <h6><a href="acuidade.php" target="_blank">
+          <h6><a href="acuidade.php" >
               <center><button type="button" class="btn btn-info">Ver sala</button></center>
             </a></h6>
         </div>
@@ -198,7 +198,7 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
             ?>
             <font color="#228B22" size="12"><?php print $t_ap; ?></font>
           </p>
-          <h6><a href="psicossocial.php" target="_blank">
+          <h6><a href="psicossocial.php" >
               <center><button type="button" class="btn btn-info">Ver sala</button></center>
             </a></h6>
         </div>
@@ -218,7 +218,7 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
             ?>
             <font color="#228B22" size="12"><?php print $t_ecg; ?></font>
           </p>
-          <h6><a href="ecg.php" target="_blank">
+          <h6><a href="ecg.php" >
               <center><button type="button" class="btn btn-info">Ver sala</button></center>
             </a></h6>
         </div>
@@ -237,7 +237,7 @@ $consulta = select("atendimento", "*", "WHERE dia LIKE '%$dia%' AND mes LIKE '%$
             ?>
             <font color="#228B22" size="12"><?php print $t_eeg; ?></font>
           </p>
-          <h6><a href="eeg.php" target="_blank">
+          <h6><a href="eeg.php" >
               <center><button type="button" class="btn btn-info">Ver sala</button></center>
             </a></h6>
         </div>

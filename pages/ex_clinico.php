@@ -16,7 +16,7 @@ $consulta2 = select("atendimento", "*", "WHERE ex_clinico LIKE 'O' AND dia LIKE 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="10">
+  <meta http-equiv="refresh" content="1000000000">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>EX CLINICO | SALA ONLINE | COPREVEN</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
