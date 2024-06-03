@@ -72,22 +72,20 @@ $eeg                = @$_GET["eeg"];
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <title>GUIA DE ATENDIMENTO (SALA 408) | PREVEN</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         .exam-item {
-			margin: 5px;
+			margin: 2px;
             border-bottom: 1px solid #000000 !important;
-            font-size: 14px;
+            font-size: 12px;
         }
     </style>
 </head>
 
 <body onload="self.print();">
-    <div class="container">
+    <div class="">
         <div class="row">
-            <div class="col-md-12">
-                <blockquote>
-                    <h6>
+            <div class="">
+                    <h4>
                         Colaborador: <strong><?php echo "$nome"; ?></strong><br>
                         RG / CPF: <strong><?php echo "$rg"; ?></strong><br>
                         Convênio: <strong><?php echo "$convenio"; ?></strong><br>
@@ -96,11 +94,9 @@ $eeg                = @$_GET["eeg"];
                         Tipo de exame: <strong><?php echo "$tipo"; ?></strong><br>
                         Função: <strong><?php echo "$cargo"; ?></strong>
                         <span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Sala 408 - 4º Andar.</span>
-                    </h6>
-                </blockquote>
+                    </h4>
             </div>
-            <div class="col-md-12">
-                <blockquote>
+            <div class="">
                     <div class="row">
                         <?php
                         $espaço = '<p><br>';
@@ -125,10 +121,8 @@ $eeg                = @$_GET["eeg"];
                         }
                         ?>
                     </div>
-                </blockquote>
             </div>
         </div>
     </div>
-    <?php include("../footer.php"); ?>
 </body>
 </html>
