@@ -62,130 +62,58 @@ $eeg                = @$_GET["eeg"];
 
 ?>
 
-
-
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<meta charset="utf-8">
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-
-
-	<title>GUIA DE ATENDIMENTO (SALA 408) | PREVEN</title>
-
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-
-
-
+    <title>GUIA DE ATENDIMENTO (SALA 408) | PREVEN</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .exam-item {
+            border-bottom: 1px solid #000000 !important;
+            font-size: 14px;
+        }
+    </style>
 </head>
 
-
-
 <body onload="self.print();">
-
-
-
-	<div class="container">
-
-		<div class="row">
-
-
-
-			<div class="col-md-12">
-
-
-
-				<blockquote>
-
-					<h6>
-
-						Colaborador: <strong><?php echo "$nome"; ?></strong><br>
-
-						RG / CPF: <strong><?php echo "$rg"; ?></strong><br>
-
-						Convênio: <strong><?php echo "$convenio"; ?></strong><br>
-
-						Empresa: <strong><?php echo "$empresa"; ?></strong><br>
-
-						Data de Nascimento: <strong><?php echo "$nascimento"; ?></strong><br>
-
-						Tipo de exame: <strong><?php echo "$tipo"; ?></strong><br>
-
-						Função: <strong><?php echo "$cargo"; ?></strong>
-
-						<span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Sala 408 - 4º Andar.</span>
-
-				</blockquote>
-
-
-
-			</div>
-
-
-
-			<div class="col-md-12">
-
-
-
-				<blockquote>
-
-					<div class="row">
-						<?php
-						$espaço = '[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]';
-
-
-						?>
-
-
-
-						<div class="col-12">[ <strong><?php echo $tem_torax ?></strong> ] RX-TORAX   <?= $espaço ?></div>
-					
-
-						<div class="col-12">[ <strong><?php echo $tem_oit ?></strong> ] RX-TORAX (OIT) <?= $espaço ?></div>
-
-						<div class="col-12">[ <strong><?php echo $tem_lombar ?></strong> ] RX-COLUNA LOMBAR  <?= $espaço ?></div>
-
-						<div class="col-12">[ <strong><?php echo $tem_cervical ?></strong> ] RX-COLUNA CERVICAL <?= $espaço ?></div>
-
-						<div class="col-12">[ <strong><?php echo $tem_sacra ?></strong> ] RX-LOMBO SACRA <?= $espaço ?> </div>
-
-						<div class="col-12">[ <strong><?php echo $tem_espiro ?></strong> ] ESPIROMETRIA <?= $espaço ?></div>
-
-					</div>
-
-
-
-
-
-				</blockquote>
-
-			</div>
-
-
-
-		</div>
-
-	</div>
-
-	</div>
-
-
-
-
-
-</body>
-
-
-
-<?php include("../footer.php"); ?>
-
-</html>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <blockquote>
+                    <h5>
+                        Colaborador: <strong><?php echo "$nome"; ?></strong><br>
+                        RG / CPF: <strong><?php echo "$rg"; ?></strong><br>
+                        Convênio: <strong><?php echo "$convenio"; ?></strong><br>
+                        Empresa: <strong><?php echo "$empresa"; ?></strong><br>
+                        Data de Nascimento: <strong><?php echo "$nascimento"; ?></strong><br>
+                        Tipo de exame: <strong><?php echo "$tipo"; ?></strong><br>
+                        Função: <strong><?php echo "$cargo"; ?></strong>
+                        <span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Sala 408 - 4º Andar.</span>
+                    </h5>
+                </blockquote>
+            </div>
+            <div class="col-md-12">
+                <blockquote>
+                    <div class="row">
+                        <?php
+                        $espaço = '';
+                        ?>
+                        <div class="col-12 exam-item">[ <strong><?php echo $tem_torax ?></strong> ] RX-TORAX <?= $espaço ?></div>
+                        <div class="col-12 exam-item">[ <strong><?php echo $tem_oit ?></strong> ] RX-TORAX (OIT) <?= $espaço ?></div>
+                        <div class="col-12 exam-item">[ <strong><?php echo $tem_lombar ?></strong> ] RX-COLUNA LOMBAR <?= $espaço ?></div>
+                        <div class="col-12 exam-item">[ <strong><?php echo $tem_cervical ?></strong> ] RX-COLUNA CERVICAL <?= $espaço ?></div>
+                        <div class="col-12 exam-item">[ <strong><?php echo $tem_sacra ?></strong> ] RX-LOMBO SACRA <?= $espaço ?></div>
+                        <div class="col-12 exam-item">[ <strong><?php echo $tem_espiro ?></strong> ] ESPIROMETRIA <?= $espaço ?></div>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    <?php include("../footer.php"); ?>
+</body
