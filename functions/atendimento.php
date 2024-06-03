@@ -61,9 +61,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $tabela = 'atendimento'; // Substitua pelo nome da tabela do seu banco de dados
                 $valores = array($consultorio => 'O', 'status' => '0', 'consultorio_atendimento' => ''); // Array associativo com o campo e valor a serem atualizados
                 $where = "id = $id"; // Condição WHERE para identificar o registro a ser atualizado
-
+                    //update($tabela, $valores, $where);
                 // Chama a função update para realizar a atualização
                 if (update($tabela, $valores, $where)) {
+                    http_response_code(200);
+                    echo json_encode(array("message" => "Status do atendimento atualizado com sucesso!"));
+                }elseif(update($tabela, $valores, $where)) {
                     http_response_code(200);
                     echo json_encode(array("message" => "Status do atendimento atualizado com sucesso!"));
                 } else {

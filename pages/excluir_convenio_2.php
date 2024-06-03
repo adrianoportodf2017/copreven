@@ -2,11 +2,11 @@
 include("../includes/autoload.php");
 include("../header.php"); 
 
-$registro = $_GET["registro"];
-$sql = "DELETE FROM convenio WHERE id = '$registro'";
-$resultado  = mysqli_query(connect(), "$sql");
-mysqli_query(connect(), $sql);
-mysqli_close(connect());
+//$registro = $_GET["registro"];
+//$sql = "DELETE FROM convenio WHERE id = '$registro'";
+//$resultado  = mysqli_query(connect(), "$sql");
+//mysqli_query(connect(), $sql);
+//mysqli_close(connect());
 
 ?>
 
@@ -15,7 +15,7 @@ mysqli_close(connect());
 
 
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col-md-12">
         <h4>
@@ -28,12 +28,14 @@ mysqli_close(connect());
 
         <br>
 
-        REGISTRO <strong><?php echo $registro; ?></strong> EXCLUÍDO COM SUCESSO !!
+        REGISTRO <strong><?php echo $registro; ?></strong> EXCLUﾃ好O COM SUCESSO !!
 
 
       </div>
       <hr>
-    </div>
+    </div> -->
+    
+    Não será possivel excluir esse convênio
 
 
 
