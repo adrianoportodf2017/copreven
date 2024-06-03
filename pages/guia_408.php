@@ -75,6 +75,7 @@ $eeg                = @$_GET["eeg"];
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         .exam-item {
+			margin: 5px;
             border-bottom: 1px solid #000000 !important;
             font-size: 14px;
         }
@@ -86,7 +87,7 @@ $eeg                = @$_GET["eeg"];
         <div class="row">
             <div class="col-md-12">
                 <blockquote>
-                    <h5>
+                    <h6>
                         Colaborador: <strong><?php echo "$nome"; ?></strong><br>
                         RG / CPF: <strong><?php echo "$rg"; ?></strong><br>
                         Convênio: <strong><?php echo "$convenio"; ?></strong><br>
@@ -95,25 +96,39 @@ $eeg                = @$_GET["eeg"];
                         Tipo de exame: <strong><?php echo "$tipo"; ?></strong><br>
                         Função: <strong><?php echo "$cargo"; ?></strong>
                         <span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Sala 408 - 4º Andar.</span>
-                    </h5>
+                    </h6>
                 </blockquote>
             </div>
             <div class="col-md-12">
                 <blockquote>
                     <div class="row">
                         <?php
-                        $espaço = '';
+                        $espaço = '<p><br>';
+
+                        if (!empty($tem_torax)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_torax . '</strong> ] RX-TORAX ' . $espaço . '</div>';
+                        }
+                        if (!empty($tem_oit)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_oit . '</strong> ] RX-TORAX (OIT) ' . $espaço . '</div>';
+                        }
+                        if (!empty($tem_lombar)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_lombar . '</strong> ] RX-COLUNA LOMBAR ' . $espaço . '</div>';
+                        }
+                        if (!empty($tem_cervical)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_cervical . '</strong> ] RX-COLUNA CERVICAL ' . $espaço . '</div>';
+                        }
+                        if (!empty($tem_sacra)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_sacra . '</strong> ] RX-LOMBO SACRA ' . $espaço . '</div>';
+                        }
+                        if (!empty($tem_espiro)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_espiro . '</strong> ] ESPIROMETRIA ' . $espaço . '</div>';
+                        }
                         ?>
-                        <div class="col-12 exam-item">[ <strong><?php echo $tem_torax ?></strong> ] RX-TORAX <?= $espaço ?></div>
-                        <div class="col-12 exam-item">[ <strong><?php echo $tem_oit ?></strong> ] RX-TORAX (OIT) <?= $espaço ?></div>
-                        <div class="col-12 exam-item">[ <strong><?php echo $tem_lombar ?></strong> ] RX-COLUNA LOMBAR <?= $espaço ?></div>
-                        <div class="col-12 exam-item">[ <strong><?php echo $tem_cervical ?></strong> ] RX-COLUNA CERVICAL <?= $espaço ?></div>
-                        <div class="col-12 exam-item">[ <strong><?php echo $tem_sacra ?></strong> ] RX-LOMBO SACRA <?= $espaço ?></div>
-                        <div class="col-12 exam-item">[ <strong><?php echo $tem_espiro ?></strong> ] ESPIROMETRIA <?= $espaço ?></div>
                     </div>
                 </blockquote>
             </div>
         </div>
     </div>
     <?php include("../footer.php"); ?>
-</body
+</body>
+</html>
