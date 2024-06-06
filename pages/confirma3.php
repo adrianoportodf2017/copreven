@@ -272,7 +272,7 @@ if ($eeg == 'A') {
                             echo '<div class="col-12 exam-item">[ <strong>' . $tem_quadril . '</strong> ] QUADRIL ' . $espaço . '</div>';
                         }
                         if (!empty($tem_espiro)) {
-                            echo '<hr><div class="col-12 exam-item">[ <strong>' . $tem_espiro . '</strong> ] ESPIROMETRIA ' . $espaço . '</div>';
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_espiro . '</strong> ] ESPIROMETRIA ' . $espaço . '</div>';
                         }
 					}
 					?>
