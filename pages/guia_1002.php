@@ -68,6 +68,7 @@ $tem_eeg            = @$_GET["tem_eeg"];
 			</div>
 			<div class="">
 				<div class="row">
+				<p><br>
 					<?php
 					$espaço = '<p><br>';
 
