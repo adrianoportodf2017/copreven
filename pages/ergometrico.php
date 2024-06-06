@@ -71,7 +71,7 @@ $tem_eeg            = @$_GET["tem_eeg"];
                     <div class="row">
                         <?php
                         $espaço = '<p><br>';
-                        echo  '<div class="col-12 exam-item">[ <strong>X</strong> ] TESTE ERGOMÉTRICO ' . $espaço . '</div>';                       
+                        echo  '<p><br><div class="col-12 exam-item">[ <strong>X</strong> ] TESTE ERGOMÉTRICO ' . $espaço . '</div>';                       
 						  ?>
 						  </div>
 				  </div>
