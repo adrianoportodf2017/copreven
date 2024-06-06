@@ -68,7 +68,7 @@ $eeg              = @$_GET["eeg"];
 					<?php
 					$espaço = '<p><br>';
 					if (!empty($tem_clinico)) {
-						echo '<div class="col-12 exam-item">[ <strong>' . $tem_torax . '</strong> ] EXAME CLÍNICO ' . $espaço . '</div>';
+						echo '<div class="col-12 exam-item">[ <strong>' . $tem_clinico . '</strong> ] EXAME CLÍNICO ' . $espaço . '</div>';
 					}
 					if (!empty($tem_romberg)) {
 						echo '<div class="col-12 exam-item">[ <strong>' . $tem_romberg . '</strong> ] ROMBERG ' . $espaço . '</div>';
