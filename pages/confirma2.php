@@ -271,7 +271,7 @@ $eeg                    = @$_GET["eeg"];
     </div>
     <div align="right">
          <br>
-         <form method="get" action="confirma3.php">
+         <form method="get" action="confirma3.php" target="_blank">
 
           <input type="hidden" name="convenio" class="form-control" value="<?php echo $convenio ?>">
           <input type="hidden" name="empresa" class="form-control" value="<?php echo $empresa ?>">

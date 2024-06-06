@@ -212,15 +212,7 @@ if ($eeg == 'A') {
 					?>
 				</div>
 			</div>
-			<div class="SGS">
-				<div class="">
-					<div class="row">
-						<?php
-						echo  '<div class="col-12 exam-item">[ <strong>__</strong> ] TESTE ERGOMÉTRICO ' . $espaço . '</div>';
-						?>
-					</div>
-				</div>
-			</div>
+		
 
 			<div class="406">
 				<div class="row">
