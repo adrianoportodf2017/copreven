@@ -1,11 +1,7 @@
-
 <?php
 
 include("../includes/autoload.php");
-include("../header.php");
-
 //DADOS DO PRIMEIRO FORMULARIO
-
 $convenio = isset($_GET["convenio"]) ? $_GET["convenio"] : '';
 $dia = isset($_GET["dia"]) ? $_GET["dia"] : '';
 $mes = isset($_GET["mes"]) ? $_GET["mes"] : '';
@@ -50,222 +46,268 @@ $resultado = mysqli_query(connect(), $sql);
 
 mysqli_close(connect());
 
-  if($ex_clinico=='A'){
-  $tem_clinico  = "X";
-  }else{
-  $tem_clinico  = "";
-  }
+if ($ex_clinico == 'A') {
+	$tem_clinico  = "X";
+} else {
+	$tem_clinico  = "";
+}
 
-  if($romberg=='A'){
-  $tem_romberg      = "X";
-  }else{
-  $tem_romberg      = "";
-  }
+if ($romberg == 'A') {
+	$tem_romberg      = "X";
+} else {
+	$tem_romberg      = "";
+}
 
-  if($rx_torax=='A'){
-  $tem_torax      = "X";
-  }else{
-  $tem_torax      = "";
-  }
+if ($rx_torax == 'A') {
+	$tem_torax      = "X";
+} else {
+	$tem_torax      = "";
+}
 
-  if($rx_torax_oit=='A'){
-  $tem_oit      = "X";
-  }else{
-  $tem_oit      = "";
-  }
+if ($rx_torax_oit == 'A') {
+	$tem_oit      = "X";
+} else {
+	$tem_oit      = "";
+}
 
-  if($rx_cervical=='A'){
-  $tem_cervical      = "X";
-  }else{
-  $tem_cervical      = "";
-  }
+if ($rx_cervical == 'A') {
+	$tem_cervical      = "X";
+} else {
+	$tem_cervical      = "";
+}
 
-  if($rx_lombar=='A'){
-  $tem_lombar      = "X";
-  }else{
-  $tem_lombar      = "";
-  }
+if ($rx_lombar == 'A') {
+	$tem_lombar      = "X";
+} else {
+	$tem_lombar      = "";
+}
 
-  if($rx_lombo_sacra=='A'){
-  $tem_sacra      = "X";
-  }else{
-  $tem_sacra      = "";
-  }
+if ($rx_lombo_sacra == 'A') {
+	$tem_sacra      = "X";
+} else {
+	$tem_sacra      = "";
+}
 
-  if($rx_torax_pa_perfil=='A'){
-  $tem_pa_perfil      = "X";
-  }else{
-  $tem_pa_perfil      = "";
-  }
+if ($rx_torax_pa_perfil == 'A') {
+	$tem_pa_perfil      = "X";
+} else {
+	$tem_pa_perfil      = "";
+}
 
-  if($rx_coluna_total=='A'){
-  $tem_coluna_total      = "X";
-  }else{
-  $tem_coluna_total      = "";
-  }
+if ($rx_coluna_total == 'A') {
+	$tem_coluna_total      = "X";
+} else {
+	$tem_coluna_total      = "";
+}
 
-  if($rx_ombro=='A'){
-  $tem_ombro      = "X";
-  }else{
-  $tem_ombro      = "";
-  }
+if ($rx_ombro == 'A') {
+	$tem_ombro      = "X";
+} else {
+	$tem_ombro      = "";
+}
 
-  if($rx_joelho=='A'){
-  $tem_joelho      = "X";
-  }else{
-  $tem_joelho      = "";
-  }
+if ($rx_joelho == 'A') {
+	$tem_joelho      = "X";
+} else {
+	$tem_joelho      = "";
+}
 
-  if($rx_mao=='A'){
-  $tem_mao      = "X";
-  }else{
-  $tem_mao      = "";
-  }
-  
-  if($rx_quadril=='A'){
-  $tem_quadril      = "X";
-  }else{
-  $tem_quadril      = "";
-  }
+if ($rx_mao == 'A') {
+	$tem_mao      = "X";
+} else {
+	$tem_mao      = "";
+}
 
-  if($espirometria=='A'){
-  $tem_espiro      = "X";
-  }else{
-  $tem_espiro      = "";
-  }
+if ($rx_quadril == 'A') {
+	$tem_quadril      = "X";
+} else {
+	$tem_quadril      = "";
+}
 
-  if($audiometria=='A'){
-  $tem_audio      = "X";
-  }else{
-  $tem_audio      = "";
-  }
+if ($espirometria == 'A') {
+	$tem_espiro      = "X";
+} else {
+	$tem_espiro      = "";
+}
 
-  if($acuidade=='A'){
-  $tem_acuidade      = "X";
-  }else{
-  $tem_acuidade      = "";
-  }
+if ($audiometria == 'A') {
+	$tem_audio      = "X";
+} else {
+	$tem_audio      = "";
+}
 
-  if($psicossocial=='A'){
-  $tem_psico      = "X";
-  }else{
-  $tem_psico      = "";
-  }
+if ($acuidade == 'A') {
+	$tem_acuidade      = "X";
+} else {
+	$tem_acuidade      = "";
+}
 
-  if($ecg=='A'){
-  $tem_ecg      = "X";
-  }else{
-  $tem_ecg      = "";
-  }
+if ($psicossocial == 'A') {
+	$tem_psico      = "X";
+} else {
+	$tem_psico      = "";
+}
 
-  if($eeg=='A'){
-  $tem_eeg      = "X";
-  }else{
-  $tem_eeg      = "";
-  }
+if ($ecg == 'A') {
+	$tem_ecg      = "X";
+} else {
+	$tem_ecg      = "";
+}
+
+if ($eeg == 'A') {
+	$tem_eeg      = "X";
+} else {
+	$tem_eeg      = "";
+}
 
 ?>
 
 
-  <div class="container">
-     <div class="col-md-12">
-      <div class="alert alert-success alert-dismissible" role="alert">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <strong>Sucesso!</strong> Atendimento inserido no sistema.<br>
-      Não esqueça de imprimir as guias de atendimento.
-      </div>
-       <div class="panel panel-default">
-          <div class="panel-body">
-            
-            
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"> </span> <?php echo $convenio ?><br>
-            <span class="glyphicon glyphicon-user" aria-hidden="true"> </span> <?php echo $nome ?><br>
-            <span class="glyphicon glyphicon-briefcase" aria-hidden="true"> </span> <?php echo $empresa ?><br>
-            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"> </span> <?php echo $tipo ?> | <font color="#cccccc"><?php echo $cargo ?></font><br>
-                       
-          </div>
-        </div>
-     </div>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-     <div class="col-md-3">
-       <div class="panel panel-default">
-          <div class="panel-body">
-            <h4>Unidade <strong>305</strong></h4>
-            <hr>
-            [ <strong><?php echo $tem_clinico ?></strong> ] EXAME CLÍNICO<br>
-            [ <strong><?php echo $tem_romberg ?></strong> ] ROMBERG
-            <br>
-            <p align="right"><a class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" target="_blank" href="guia_305.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&tem_clinico=<?php echo $tem_clinico ?>&romberg=<?php echo $tem_romberg ?>&nascimento=<?php echo $nascimento ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>
-          </div>
-      </div>
-      <div class="panel panel-default">
-          <div class="panel-body">
-            <h4>SGS / <strong>Teste Ergometrico</strong></h4>
-            
-            <br>
-            <p align="right"><a class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" target="_blank" href="ergometrico.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&nascimento=<?php echo $nascimento ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>            
-          </div>
-        </div>
-    </div>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h4>Unidade <strong>406</strong></h4>
-            <hr>
-            <h6>EXAMES LABORATORIAIS:</h6>
-            [ <strong><?php echo $laboratorio ?></strong> ] 
-            <br>
-            <p align="right"><a class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" target="_blank" href="guia_406.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&laboratorio=<?php echo $laboratorio ?>&nascimento=<?php echo $nascimento ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>
-          </div>
-        </div>
-    </div>
+	<title>GUIA DE ATENDIMENTO | PREVEN</title>
+	<style>
+		.exam-item {
+			margin: 2px;
+			border-bottom: 1px solid #000000 !important;
+			font-size: 12px;
+		}
+	</style>
+</head>
 
-    <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h4>Unidade <strong>408</strong></h4>
-            <hr>
-            [ <strong><?php echo $tem_torax ?></strong> ] RX-TORAX<br>
-            [ <strong><?php echo $tem_oit ?></strong> ] RX-TORAX (OIT)<br>
-            [ <strong><?php echo $tem_lombar ?></strong> ] RX-COLUNA LOMBAR<br>
-            [ <strong><?php echo $tem_cervical ?></strong> ] RX-COLUNA CERVICAL<br>
-            [ <strong><?php echo $tem_sacra ?></strong> ] RX-LOMBO SACRA<br>
-            [ <strong><?php echo $tem_pa_perfil ?></strong> ] TÓRAX PA / PERFIL<br>
-            [ <strong><?php echo $tem_coluna_total ?></strong> ] COLUNA TOTAL<br>
-            [ <strong><?php echo $tem_ombro ?></strong> ] OMBRO<br>
-            [ <strong><?php echo $tem_joelho ?></strong> ] JOELHO<br>
-            [ <strong><?php echo $tem_mao ?></strong> ] MÃO<br>
-            [ <strong><?php echo $tem_quadril ?></strong> ] QUADRIL<br>
-            <hr>
-            [ <strong><?php echo $tem_espiro ?></strong> ] ESPIROMETRIA    
-            <br>
-            <p align="right"><a class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" target="_blank" href="guia_408.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&nascimento=<?php echo $nascimento ?>&tem_torax=<?php echo $tem_torax ?>&tem_oit=<?php echo $tem_oit ?>&tem_lombar=<?php echo $tem_lombar ?>&tem_cervical=<?php echo $tem_cervical ?>&tem_sacra=<?php echo $tem_sacra ?>&tem_espiro=<?php echo $tem_espiro ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>
-          </div>
-        </div>
-    </div>
+<body onload="self.print();">
+	<div class="">
+		<div class="row">
+			<div class="">
 
-    <div class="col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h4>Unidade <strong>1.002</strong></h4>
-            <hr>
-            [ <strong><?php echo $tem_audio ?></strong> ] AUDIOMETRIA<br>
-            [ <strong><?php echo $tem_acuidade ?></strong> ] ACUIDADE VISUAL<br>
-            [ <strong><?php echo $tem_psico ?></strong> ] AV PSICOSSOCIAL<br>
-            [ <strong><?php echo $tem_ecg ?></strong> ] ECG<br>
-            [ <strong><?php echo $tem_eeg ?></strong> ] EEG<br>
-            <br>
-            <p align="right"><a class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" class="btn btn-primary" target="_blank" href="guia_1002.php?convenio=<?php echo $convenio ?>&empresa=<?php echo $empresa ?>&dia=<?php echo $dia ?>&mes=<?php echo $mes ?>&ano=<?php echo $ano ?>&nome=<?php echo $nome ?>&rg=<?php echo $rg ?>&cargo=<?php echo $cargo ?>&tipo=<?php echo $tipo ?>&nascimento=<?php echo $nascimento ?>&tem_audio=<?php echo $tem_audio ?>&tem_acuidade=<?php echo $tem_acuidade ?>&tem_psico=<?php echo $tem_psico ?>&tem_ecg=<?php echo $tem_ecg ?>&tem_eeg=<?php echo $tem_eeg ?>"><span class="label label-danger"><font color="#fffff">Emitir Guia</a></font></span></p>            
-          </div></div>
+				<h4>
+					Colaborador: <strong><?php echo "$nome"; ?></strong><br>
+					RG / CPF: <strong><?php echo "$rg"; ?></strong><br>
+					Convênio: <strong><?php echo "$convenio"; ?></strong><br>
+					Empresa: <strong><?php echo "$empresa"; ?></strong><br>
+					Data de Nascimento: <strong><?php echo "$nascimento"; ?></strong><br>
+					Tipo de exame: <strong><?php echo "$tipo"; ?></strong><br>
+					Função: <strong><?php echo "$cargo"; ?></strong>
+				</h4>
+			</div>
+			<div class="305">
+				<div class="row">
+					<?php
+					$espaço = '<p><br>';
+					if ($tem_clinico == 'X' || $tem_romberg == 'X') {
+						echo '<h4>Unidade <strong>305 - </strong><span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Sala 305 - 3º Andar.</span></h4>';
+						if (!empty($tem_clinico)) {
+							echo '<div class="col-12 exam-item">[ <strong>' . $tem_clinico . '</strong> ] EXAME CLÍNICO ' . $espaço . '</div>';
+						}
+						if (!empty($tem_romberg)) {
+							echo '<div class="col-12 exam-item">[ <strong>' . $tem_romberg . '</strong> ] ROMBERG ' . $espaço . '</div>';
+						}
+					}
+					?>
+				</div>
+			</div>
+			<div class="SGS">
+				<div class="">
+					<div class="row">
+						<?php
+						echo '<h4><strong>SGS </strong><span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Av. Presidente Vargas, 435 - Sala 1.803 - 18º Andar.</span></h4>';
+						echo  '<div class="col-12 exam-item">[ <strong>__</strong> ] TESTE ERGOMÉTRICO ' . $espaço . '</div>';
+						?>
+					</div>
+				</div>
+			</div>
 
-        
-    </div>
-
-  </div>
-
+			<div class="406">
+				<div class="row">
+					<?php
+					$espaço = '<p><br>';
+					if (!empty($laboratorio)) {
+						echo '<h4>Unidade <strong>406 - </strong><span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Sala 406 - 4º Andar.</span></h4>';
+						echo '<div class="col-12 exam-item">[ <strong>X</strong> ][<strong>' . $laboratorio . '</strong>] ' . $espaço . '</div>';
+					}
+					?>
+				</div>
+			</div>
+			<div class="408">
+				<div class="row">
+					<?php
+					$espaço = '<p><br>';
+					if ($tem_torax == 'X' || $tem_oit == 'X' || $tem_lombar == 'X' || $tem_cervical == 'X' || $tem_sacra == 'X' || $tem_pa_perfil == 'X' || $tem_coluna_total == 'X' || $tem_ombro == 'X' || $tem_joelho == 'X' || $tem_mao == 'X' || $tem_quadril == 'X' || $tem_espiro == 'X') {
+						echo '<h4>Unidade <strong>408 - </strong><span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Sala 305 - 3º Andar.</span></h4>';
+						echo '';
+						if (!empty($tem_torax)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_torax . '</strong> ] RX-TORAX ' . $espaço . '</div>';
+                        }
+                        if (!empty($tem_oit)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_oit . '</strong> ] RX-TORAX (OIT) ' . $espaço . '</div>';
+                        }
+                        if (!empty($tem_lombar)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_lombar . '</strong> ] RX-COLUNA LOMBAR ' . $espaço . '</div>';
+                        }
+                        if (!empty($tem_cervical)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_cervical . '</strong> ] RX-COLUNA CERVICAL ' . $espaço . '</div>';
+                        }
+                        if (!empty($tem_sacra)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_sacra . '</strong> ] RX-LOMBO SACRA ' . $espaço . '</div>';
+                        }
+						if (!empty($tem_pa_perfil)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_pa_perfil . '</strong> ] TÓRAX PA / PERFIL ' . $espaço . '</div>';
+                        }
+						if (!empty($tem_coluna_total)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_coluna_total . '</strong> ] COLUNA TOTAL ' . $espaço . '</div>';
+                        }
+						if (!empty($tem_ombro)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_ombro . '</strong> ] OMBRO ' . $espaço . '</div>';
+                        }
+						if (!empty($tem_joelho)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_joelho . '</strong> ] JOELHO ' . $espaço . '</div>';
+                        }
+						if (!empty($tem_mao)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_mao . '</strong> ] MÃO ' . $espaço . '</div>';
+                        }
+						if (!empty($tem_quadril)) {
+                            echo '<div class="col-12 exam-item">[ <strong>' . $tem_quadril . '</strong> ] QUADRIL ' . $espaço . '</div>';
+                        }
+                        if (!empty($tem_espiro)) {
+                            echo '<hr><div class="col-12 exam-item">[ <strong>' . $tem_espiro . '</strong> ] ESPIROMETRIA ' . $espaço . '</div>';
+                        }
+					}
+					?>
+				</div>
+			</div>
+			<div class="1.002">
+				<div class="row">
+					<?php
+					$espaço = '<p><br>';
+					if ($tem_audio == 'X' || $tem_acuidade == 'X' || $tem_psico == 'X' || $tem_ecg == 'X' || $tem_eeg == 'X') {
+						echo '<h4>Unidade <strong>1.002 - </strong><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Sala 1.002 - 10º Andar.</span></h4>';
+						if (!empty($tem_audio)) {
+							echo '<div class="col-12 exam-item">[ <strong>' . $tem_audio . '</strong> ] AUDIOMETRIA ' . $espaço . '</div>';
+						}
+						if (!empty($tem_acuidade)) {
+							echo '<div class="col-12 exam-item">[ <strong>' . $tem_acuidade . '</strong> ] ACUIDADE VISUAL  ' . $espaço . '</div>';
+						}
+						if (!empty($tem_psico)) {
+							echo '<div class="col-12 exam-item">[ <strong>' . $tem_psico . '</strong> ] AV. PSICOSSOCIAL   ' . $espaço . '</div>';
+						}
+						if (!empty($tem_ecg)) {
+							echo '<div class="col-12 exam-item">[ <strong>' . $tem_ecg . '</strong> ] ECG   ' . $espaço . '</div>';
+						}
+						if (!empty($tem_eeg)) {
+							echo '<div class="col-12 exam-item">[ <strong>' . $tem_eeg . '</strong> ] EEG   ' . $espaço . '</div>';
+						}
+					}
+					?>
+				</div>
+			</div>			
+		</div>
 </body>
 
-<?php include("../footer.php"); ?>
-
-  </html>
+</html>
