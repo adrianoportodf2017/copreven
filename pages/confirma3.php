@@ -202,7 +202,6 @@ if ($eeg == 'A') {
 					<?php
 					$espaço = '<p><br>';
 					if ($tem_clinico == 'X' || $tem_romberg == 'X') {
-						echo '<h4>Unidade <strong>305 - </strong><span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Sala 305 - 3º Andar.</span></h4>';
 						if (!empty($tem_clinico)) {
 							echo '<div class="col-12 exam-item">[ <strong>' . $tem_clinico . '</strong> ] EXAME CLÍNICO ' . $espaço . '</div>';
 						}
@@ -217,7 +216,6 @@ if ($eeg == 'A') {
 				<div class="">
 					<div class="row">
 						<?php
-						echo '<h4><strong>SGS </strong><span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Av. Presidente Vargas, 435 - Sala 1.803 - 18º Andar.</span></h4>';
 						echo  '<div class="col-12 exam-item">[ <strong>__</strong> ] TESTE ERGOMÉTRICO ' . $espaço . '</div>';
 						?>
 					</div>
@@ -229,7 +227,6 @@ if ($eeg == 'A') {
 					<?php
 					$espaço = '<p><br>';
 					if (!empty($laboratorio)) {
-						echo '<h4>Unidade <strong>406 - </strong><span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Sala 406 - 4º Andar.</span></h4>';
 						echo '<div class="col-12 exam-item">[ <strong>X</strong> ][<strong>' . $laboratorio . '</strong>] ' . $espaço . '</div>';
 					}
 					?>
@@ -240,7 +237,6 @@ if ($eeg == 'A') {
 					<?php
 					$espaço = '<p><br>';
 					if ($tem_torax == 'X' || $tem_oit == 'X' || $tem_lombar == 'X' || $tem_cervical == 'X' || $tem_sacra == 'X' || $tem_pa_perfil == 'X' || $tem_coluna_total == 'X' || $tem_ombro == 'X' || $tem_joelho == 'X' || $tem_mao == 'X' || $tem_quadril == 'X' || $tem_espiro == 'X') {
-						echo '<h4>Unidade <strong>408 - </strong><span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Sala 305 - 3º Andar.</span></h4>';
 						echo '';
 						if (!empty($tem_torax)) {
                             echo '<div class="col-12 exam-item">[ <strong>' . $tem_torax . '</strong> ] RX-TORAX ' . $espaço . '</div>';
@@ -287,7 +283,6 @@ if ($eeg == 'A') {
 					<?php
 					$espaço = '<p><br>';
 					if ($tem_audio == 'X' || $tem_acuidade == 'X' || $tem_psico == 'X' || $tem_ecg == 'X' || $tem_eeg == 'X') {
-						echo '<h4>Unidade <strong>1.002 - </strong><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true">Endereço: Sala 1.002 - 10º Andar.</span></h4>';
 						if (!empty($tem_audio)) {
 							echo '<div class="col-12 exam-item">[ <strong>' . $tem_audio . '</strong> ] AUDIOMETRIA ' . $espaço . '</div>';
 						}
