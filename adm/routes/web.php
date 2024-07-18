@@ -14,6 +14,7 @@ use Illuminate\Support\Str;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::post('login', [AuthController::class, 'login']);
 
 Route::get('/', function () {
     return redirect()->route('login');
