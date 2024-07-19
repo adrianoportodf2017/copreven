@@ -1,7 +1,8 @@
 <?php
+// Certifique-se de que não há espaço em branco antes deste ponto
+session_start();
 header('Content-Type: text/html; charset=UTF-8');
 include_once("includes/autoload.php");
-session_start();
 date_default_timezone_set('America/Sao_Paulo');
 
 // Verifica se o usuário está logado
