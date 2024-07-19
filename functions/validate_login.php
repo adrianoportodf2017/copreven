@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
     // Use http instead of https
-    $api_url = 'http://127.0.0.1:8000/api/login';
+    $api_url = 'adm/api/login';
     $data = array('email' => $email, 'password' => $password);
     $options = array(
         'http' => array(
