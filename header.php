@@ -1,7 +1,16 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
 include_once("includes/autoload.php");
+session_start();
 date_default_timezone_set('America/Sao_Paulo');
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION['user'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$user = $_SESSION['user'];
 
 ?>
 
@@ -25,11 +34,13 @@ date_default_timezone_set('America/Sao_Paulo');
     <script src="https://kit.fontawesome.com/92f06b8bd3.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-light bg-light">
-<a href="<?= base_url() ?>"><img src="http://copreven.com.br/sistema/app/images/logo1.png" width="300px"></a>
-    <span style="color: #000080;">
-        <i class="far fa-user" style="color: #000080"></i>
+<nav class="navbar navbar-light bg-light d-flex justify-content-between">
+    <a href="<?= base_url() ?>"><img src="http://copreven.com.br/sistema/app/images/logo1.png" width="300px"></a>
+    <div>
         <span style="color: #000080; font-family: 'Alegreya Sans', sans-serif; font-size: 17px;">
+            <i class="far fa-user" style="color: #000080"></i>
+            Bem-vindo(a), <?= htmlspecialchars($user['name']); ?>
         </span>
-    </span>
+        <a href="logout.php" class="btn btn-danger btn-sm ml-3">Logout</a>
+    </div>
 </nav>
