@@ -1,7 +1,7 @@
 <?php
 
 
-include("../includes/autoload.php");
+ 
 include("../header.php");
 
 $convenio1          = $_GET["id_convenio"];

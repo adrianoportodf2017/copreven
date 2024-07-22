@@ -1,5 +1,5 @@
 <?php
-include("../includes/autoload.php");
+ 
 
 // Verifica se a variável de sessão 'login' está definida, senão atribui uma string vazia
 $login = isset($_SESSION['login']) ? $_SESSION['login'] : '';

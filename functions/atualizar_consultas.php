@@ -1,5 +1,5 @@
 <?php
-include("../includes/autoload.php");
+ 
 $dia                = date('d');
 $mes                = date('m');
 $ano                = date('Y');

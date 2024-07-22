@@ -1,7 +1,7 @@
 
 
 <?php
-include("../includes/autoload.php");
+ 
 include("../header.php"); 
 
 $nome               = $_GET["nome"];

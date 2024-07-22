@@ -1,6 +1,6 @@
 <?php
 
-include("../includes/autoload.php");
+ 
 //DADOS DO PRIMEIRO FORMULARIO
 $convenio = isset($_GET["convenio"]) ? $_GET["convenio"] : '';
 $dia = isset($_GET["dia"]) ? $_GET["dia"] : '';

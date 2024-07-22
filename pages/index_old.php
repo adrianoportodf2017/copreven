@@ -17,7 +17,7 @@ if ( !isset($_SESSION['login']) and !isset($_SESSION['senha']) ) {
 
 <?php
 
-include("../includes/autoload.php");
+ 
 include("../header.php");
 
 

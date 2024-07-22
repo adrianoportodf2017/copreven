@@ -1,5 +1,5 @@
 <?php
-include("../includes/autoload.php");
+ 
 include("../header.php");
 
 $convenio = isset($_GET["convenio"]) ? $_GET["convenio"] : '';

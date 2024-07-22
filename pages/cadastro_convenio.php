@@ -1,5 +1,5 @@
 <?php
-include("../includes/autoload.php");
+ 
 include("../header.php"); ?>
 
   <div class="container">

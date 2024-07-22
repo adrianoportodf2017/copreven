@@ -2,7 +2,7 @@
 
 <?php
 
-include("../includes/autoload.php");
+ 
 include("../header.php"); 
 
 $registro           = $_GET["id_convenio"];

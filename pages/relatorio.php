@@ -1,6 +1,6 @@
 
 <?php
-include("../includes/autoload.php");
+ 
 include("../header.php");
 
 $consulta   = select("convenio","*","WHERE nome LIKE '%'","ORDER BY nome ASC");

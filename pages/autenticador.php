@@ -4,7 +4,7 @@
 $email 		= $_REQUEST['login'];
 $pass 		= $_REQUEST['password'];
 
-include("../includes/autoload.php");
+ 
 include("../header.php");
 
 

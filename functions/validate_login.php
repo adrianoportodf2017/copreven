@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         )
     );
     $context  = stream_context_create($options);
-    @$result = file_get_contents($api_url, false, $context);
+    $result = file_get_contents($api_url, false, $context);
 
     if ($result === FALSE) {
         echo json_encode(array('success' => false));

@@ -3,7 +3,7 @@
 <?php
 
 
-include("../includes/autoload.php");
+ 
 include("../header.php"); 
 
 $msg                = "99";

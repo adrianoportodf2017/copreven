@@ -1,10 +1,7 @@
 <?php
 session_start();
-
 include_once("includes/autoload.php");
-date_default_timezone_set('America/Sao_Paulo');
-// Verifica se o usuário está logado
-// Verifica se o usuário está logado
+
 if (!isset($_SESSION['user'])) {
     include 'login.php';
     die();

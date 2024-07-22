@@ -1,7 +1,7 @@
 
 
 <?php
-include("../includes/autoload.php");
+ 
 include("../header.php");
 
 $nome               = $_GET["nome"];
@@ -20,7 +20,7 @@ mysqli_close(connect(), $conexao);
 ?>
 
 <?php
-include("../includes/autoload.php");
+ 
 include("../header.php");
 
 $consulta   = select("convenio","*","WHERE nome LIKE '%'","ORDER BY id DESC", "limit 1");

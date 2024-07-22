@@ -3,7 +3,7 @@
 <?php
 error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
 $registro = $_GET["registro"];
-include("../includes/autoload.php");
+ 
 include("../header.php");
 
 $sql = "DELETE FROM atendimento WHERE id = '$registro'";
