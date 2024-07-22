@@ -1,5 +1,11 @@
 <?php
-("includes/autoload.php");
+function base_url()
+{
+    require('config/config.php');
+    // TENTA ESTABELECER A CONEXAO
+    $base_url = $base_url;
+    return $base_url;
+}
 ?>
 
 <!doctype html>

@@ -1,12 +1,19 @@
 <?php
 session_start();
-include("../includes/autoload.php");
+
+function base_url()
+{
+    require('../config/config.php');
+    // TENTA ESTABELECER A CONEXAO
+    $base_url = $base_url;
+    return $base_url;
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
     // Use http instead of https
-    $api_url = $base_url.'/adm/public/api/login';
+    $api_url = base_url().'/adm/public/api/login';
     $data = array('email' => $email, 'password' => $password);
     $options = array(
         'http' => array(

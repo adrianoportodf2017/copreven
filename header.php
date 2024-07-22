@@ -1,12 +1,7 @@
 <?php
-session_start();
+
 include_once("includes/autoload.php");
 
-if (!isset($_SESSION['user'])) {
-    include 'login.php';
-    die();
-}
-$user = $_SESSION['user'];
 ?>
 <!doctype html>
 

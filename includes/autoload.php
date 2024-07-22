@@ -1,5 +1,10 @@
 <?php
-
+session_start();
+if (!isset($_SESSION['user'])) {
+    include 'login.php';
+    die();
+}
+$user = $_SESSION['user'];
 // Define a codificação de caracteres como UTF-8
 header('Content-Type: text/html; charset=UTF-8');
 // Inclua outros códigos PHP abaixo desta linha
