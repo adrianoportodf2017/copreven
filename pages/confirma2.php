@@ -314,6 +314,6 @@ $eeg                    = @$_GET["eeg"];
   </div>
 
 </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
 
   </html>

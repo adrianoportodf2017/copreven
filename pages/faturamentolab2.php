@@ -111,5 +111,5 @@ $consulta = select("atendimento","*","WHERE laboratorio NOT LIKE '' AND dia LIKE
   
 
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

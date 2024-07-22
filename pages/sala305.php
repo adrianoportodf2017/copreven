@@ -109,5 +109,5 @@ $consulta = select("atendimento","*","WHERE (ex_clinico = '1') OR (romberg = '1'
   
 
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

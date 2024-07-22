@@ -224,5 +224,5 @@ $consulta   = select("atendimento","*","WHERE convenio LIKE '%$convenio%' AND di
   </div>
 
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

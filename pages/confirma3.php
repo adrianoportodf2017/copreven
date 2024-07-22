@@ -1,5 +1,5 @@
 <?php
-
+include_once("../includes/autoload.php");
  
 //DADOS DO PRIMEIRO FORMULARIO
 $convenio = isset($_GET["convenio"]) ? $_GET["convenio"] : '';

@@ -193,5 +193,5 @@ $consulta   = select("atendimento","*","WHERE id LIKE '$registro'","ORDER BY id 
   </div>
 
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>http://localhost/copreven/pages/alterar3.php?registro=1

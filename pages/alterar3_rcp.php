@@ -56,5 +56,5 @@ mysqli_close(connect());
 
 
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

@@ -1,4 +1,5 @@
 <?php
+include_once("../includes/autoload.php");
 
 $convenio           = $_POST["convenio"];
 $dia                = $_POST["dia"];
@@ -229,5 +230,5 @@ $tipo               = $_POST["tipo"];
 
   </div>
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

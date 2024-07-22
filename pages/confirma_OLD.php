@@ -154,5 +154,5 @@ $consulta   = select("atendimento","*","WHERE nome LIKE '%'","ORDER BY id DESC",
 
   </div>
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

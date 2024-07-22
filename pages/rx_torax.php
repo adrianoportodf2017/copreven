@@ -100,5 +100,5 @@ $consulta = select("atendimento","*","WHERE (rx_torax = '1') OR (rx_torax_oit = 
   
 
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

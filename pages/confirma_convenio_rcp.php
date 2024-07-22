@@ -77,5 +77,5 @@ $consulta   = select("convenio","*","WHERE nome LIKE '%'","ORDER BY id DESC", "l
 
   </div>
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

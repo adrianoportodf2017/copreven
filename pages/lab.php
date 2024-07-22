@@ -112,5 +112,5 @@ $consulta2 = select("atendimento","*","WHERE obs_lab LIKE 'O' AND dia LIKE '%$di
   
 
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

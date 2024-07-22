@@ -224,5 +224,5 @@ $consulta = select("atendimento","*","WHERE dia LIKE '%$dia%' AND mes LIKE '%$me
 
   
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

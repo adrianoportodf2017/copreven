@@ -41,5 +41,5 @@ $consulta   = select("convenio","*","WHERE nome LIKE '%'","ORDER BY nome ASC");
     </div>
 
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

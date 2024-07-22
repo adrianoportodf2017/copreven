@@ -111,5 +111,5 @@ $consulta2 = select("atendimento","*","WHERE acuidade LIKE 'O' AND dia LIKE '%$d
   
 
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

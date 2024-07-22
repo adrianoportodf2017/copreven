@@ -98,5 +98,5 @@ $consulta = select("atendimento","*","WHERE (audiometria = '1') OR (acuidade = '
   
 
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

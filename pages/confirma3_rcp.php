@@ -289,5 +289,5 @@ mysqli_close(connect());
   </div>
 
 </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

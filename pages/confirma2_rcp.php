@@ -1,4 +1,5 @@
 <?php
+include_once("../includes/autoload.php");
 
 //DADOS DO PRIMEIRO FORMULARIO
 
@@ -330,5 +331,5 @@ $eeg                    = @$_GET["eeg"];
   </div>
 
 </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

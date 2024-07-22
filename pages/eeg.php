@@ -111,5 +111,5 @@ $consulta2 = select("atendimento","*","WHERE eeg LIKE 'O' AND dia LIKE '%$dia%' 
   
 
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

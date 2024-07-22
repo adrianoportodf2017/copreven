@@ -52,5 +52,5 @@ mysqli_close($conexao);
   </center>
 
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>

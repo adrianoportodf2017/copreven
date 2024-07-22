@@ -379,5 +379,5 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
   </div>
 
   </body>
-<?phpinclude("../footer.php"); ?>
+<?php include("../footer.php"); ?>
   </html>
