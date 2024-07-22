@@ -1,9 +1,8 @@
 <?php
 // Certifique-se de que não há espaço em branco antes deste ponto
 session_start();
-header('Content-Type: text/html; charset=UTF-8');
-include_once("includes/autoload.php");
 date_default_timezone_set('America/Sao_Paulo');
+include_once("includes/autoload.php");
 // Verifica se o usuário está logado
 if (!isset($_SESSION['user'])) {
     header("Location: login.php");
