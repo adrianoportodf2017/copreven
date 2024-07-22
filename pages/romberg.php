@@ -110,6 +110,5 @@ $consulta2 = select("atendimento","*","WHERE romberg LIKE 'O' AND dia LIKE '%$di
   
 
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

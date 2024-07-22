@@ -48,5 +48,4 @@ update('atendimento', $valores, "id = '$id'");
     </center>
 </body>
 </html>
-
-<?php include('../footer.php') ?>
+<?phpinclude('../footer.php') ?>

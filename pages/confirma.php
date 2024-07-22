@@ -1,7 +1,6 @@
 <?php 
 include("../header.php"); ?>
-
-<?php 
+<?php
 $convenio           = $_POST["convenio"];
 $dia                = $_POST["dia"];
 $mes                = $_POST["mes"];

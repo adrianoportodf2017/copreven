@@ -110,6 +110,5 @@ $consulta2 = select("atendimento","*","WHERE espirometria LIKE 'O' AND dia LIKE 
   
 
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

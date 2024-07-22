@@ -109,6 +109,5 @@ $consulta2 = select("atendimento","*","WHERE audiometria LIKE 'O' AND dia LIKE '
   
 
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 include("../header.php");
 
 $consulta   = select("atendimento","*","WHERE nome LIKE '%'","ORDER BY id DESC", "limit 1");
@@ -155,6 +154,5 @@ $consulta   = select("atendimento","*","WHERE nome LIKE '%'","ORDER BY id DESC",
 
   </div>
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

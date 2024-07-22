@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 include("../header.php");
 
 $registro           = $_GET["registro"];
@@ -217,6 +216,5 @@ $consulta   = select("atendimento","*","WHERE id LIKE '$registro'","ORDER BY id 
   </div>
 
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

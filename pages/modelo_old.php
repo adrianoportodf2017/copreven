@@ -13,9 +13,7 @@ if ( !isset($_SESSION['login']) and !isset($_SESSION['senha']) ) {
     //Redireciona para a página de autenticação
     header('location:../index.php');
 }
-?>
-
-<?php
+?><?php
 
  
 include("../header.php");

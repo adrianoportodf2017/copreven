@@ -116,5 +116,4 @@ include('functions/home.php');
             <hr>
         </div>
     </div>
-</div>
-<?php include("footer.php"); ?>
+</div><?phpinclude("footer.php"); ?>

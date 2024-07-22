@@ -13,9 +13,7 @@ if ( !isset($_SESSION['login']) and !isset($_SESSION['senha']) ) {
     //Redireciona para a página de autenticação
     header('location:../index.php');
 }
-?>
-
-<?php
+?><?php
 
  
 include("../header.php");
@@ -202,8 +200,7 @@ $consulta2          = select("atendimento","*","WHERE ex_clinico NOT LIKE '' AND
 
 
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   <script> 
 function formatar(src, mask) 
 { 

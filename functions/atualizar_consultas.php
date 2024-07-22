@@ -42,9 +42,7 @@ if ($consulta == true) {
                     <br> [EXAMES: <strong><?php echo $consulta[$i]['laboratorio'] ?></strong>]
                 <?php } ?>
             </li>
-        </ul>
-
-<?php
+        </ul><?php
     }
 } else {
     echo "Nenhum dado encontrado!";

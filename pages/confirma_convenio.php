@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 include("../header.php"); 
 
 $nome               = $_GET["nome"];
@@ -15,9 +14,7 @@ $resultado  = mysqli_query(connect(), "$sql");
 
 mysqli_close(connect());
 
-?>
-
-<?php
+?><?php
 
 $consulta   = select("convenio","*","WHERE nome LIKE '%'","ORDER BY id DESC", "limit 1");
 

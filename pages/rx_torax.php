@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 include("../header.php");
 
 
@@ -101,6 +100,5 @@ $consulta = select("atendimento","*","WHERE (rx_torax = '1') OR (rx_torax_oit = 
   
 
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

@@ -1,5 +1,3 @@
-
-
 <?php
 error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
 $registro = $_GET["registro"];
@@ -58,6 +56,5 @@ mysqli_close(connect());
 
 
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 include("../header.php");
 
 $variavel 	= 'O';
@@ -53,6 +52,5 @@ mysqli_close($conexao);
   </center>
 
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

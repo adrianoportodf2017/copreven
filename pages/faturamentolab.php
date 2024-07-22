@@ -1,7 +1,5 @@
-
-<?php 
+<?php
 include("../header.php");
-
 $consulta   = select("convenio","*","WHERE nome LIKE '%'","ORDER BY nome ASC");
 
 ?>
@@ -99,6 +97,5 @@ $consulta   = select("convenio","*","WHERE nome LIKE '%'","ORDER BY nome ASC");
 
 
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

@@ -1,5 +1,3 @@
-
-
 <?php
 
 $convenio           = $_POST["convenio"];
@@ -231,6 +229,5 @@ $tipo               = $_POST["tipo"];
 
   </div>
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

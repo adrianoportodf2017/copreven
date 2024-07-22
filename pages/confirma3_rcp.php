@@ -1,5 +1,3 @@
-
-
 <?php
 
  
@@ -291,6 +289,5 @@ mysqli_close(connect());
   </div>
 
 </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

@@ -1,5 +1,3 @@
-
-
 <?php
   
 include("../header.php");
@@ -55,6 +53,5 @@ mysqli_close(connect());
   </center>
 
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

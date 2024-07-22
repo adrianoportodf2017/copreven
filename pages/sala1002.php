@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 include("../header.php");
 
 
@@ -99,6 +98,5 @@ $consulta = select("atendimento","*","WHERE (audiometria = '1') OR (acuidade = '
   
 
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

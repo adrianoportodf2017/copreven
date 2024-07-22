@@ -61,5 +61,4 @@ function listar_atendimento_salas($consulta, $consultorio)
       ?>
     </div>
   </div>
-
-<?php } ?>
+<?php} ?>

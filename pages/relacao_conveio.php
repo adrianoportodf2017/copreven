@@ -52,6 +52,5 @@ $consulta2          = select("atendimento","*","WHERE ex_clinico NOT LIKE '' AND
   </div>
 
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

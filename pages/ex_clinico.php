@@ -104,7 +104,6 @@ $consulta2 = select("atendimento", "*", "WHERE ex_clinico LIKE 'O' AND dia LIKE 
 
 
 </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
 
 </html>

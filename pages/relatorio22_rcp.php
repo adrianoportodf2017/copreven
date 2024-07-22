@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 include("../header.php");
 
 $convenio = isset($_GET["convenio"]) ? $_GET["convenio"] : '';
@@ -380,6 +379,5 @@ $consulta1   = select("atendimento","*","WHERE nome LIKE '%$nome%' AND dia LIKE 
   </div>
 
   </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
   </html>

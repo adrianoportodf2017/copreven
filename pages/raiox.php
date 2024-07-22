@@ -335,7 +335,6 @@ $consulta2 = select("atendimento", "*", "WHERE obs_raiox LIKE 'O' AND dia LIKE '
 
 
 </body>
-
-<?php include("../footer.php"); ?>
+<?phpinclude("../footer.php"); ?>
 
 </html>
