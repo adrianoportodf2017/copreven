@@ -1,7 +1,5 @@
 
-
-<?php
- 
+<?php 
 include("../header.php"); 
 
 $nome               = $_GET["nome"];

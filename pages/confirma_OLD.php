@@ -1,7 +1,5 @@
 
-
-<?php
- 
+<?php 
 include("../header.php");
 
 $consulta   = select("atendimento","*","WHERE nome LIKE '%'","ORDER BY id DESC", "limit 1");

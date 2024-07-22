@@ -1,7 +1,5 @@
 
-
-<?php
- 
+<?php 
 include("../header.php");
 
 $convenio           = $_GET["convenio"];
